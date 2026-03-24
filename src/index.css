@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Cinzel:wght@400;700;900&family=Aref+Ruqaa:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --primary: #D4AF37;
+  --primary-dark: #B8860B;
+  --background: #FCF9F5;
+  --on-surface: #1C1C1A;
+  --surface: #F5F1EB;
+  --surface-light: #EBE5DC;
+  --gold: #D4AF37;
+  --gold-dark: #B8860B;
+  --gold-light: #FFD700;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.1;
+    color: var(--on-surface);
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1.2s ease-out forwards;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 4s linear infinite;
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes scroll-line {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-scroll-line {
+    animation: scroll-line 2.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  }
+}
