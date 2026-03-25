@@ -1,4 +1,5 @@
 import { ChevronDown } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 // Pool of photos — add more paths here as you add images to /public/photos/
 const heroPhotos = [
@@ -21,8 +22,18 @@ function getDailyPhoto(): string {
   return heroPhotos[dayOfYear % heroPhotos.length];
 }
 
+const services = ["DESIGN", "WEB", "MOBILE", "SPONSORING", "ADS"];
+
 export default function Hero() {
   const photo = getDailyPhoto();
+  const [serviceIndex, setServiceIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setServiceIndex((prev) => (prev + 1) % services.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
@@ -46,14 +57,23 @@ export default function Hero() {
         </div>
 
         {/* Desktop-only Decorative Diamond */}
-        <div className="absolute top-1/2 -left-12 -translate-y-1/2 w-24 h-24 bg-white rotate-45 hidden lg:block shadow-[-10px_10px_30px_rgba(0,0,0,0.05)] z-20 border-l border-b border-gold/10" />
+        <div className="absolute top-1/2 -left-12 -translate-y-1/2 w-24 h-24 bg-white rotate-45 hidden lg:block shadow-[-10px_10px_30px_rgba(0,0,0,0.05)] z-20 border-l border-b border-gold/10 flex items-center justify-center overflow-hidden">
+          <div className="-rotate-45 text-center px-1">
+            <div 
+              key={serviceIndex}
+              className="animate-fade-in text-[10px] font-headline font-bold tracking-[0.2em] text-gold uppercase whitespace-nowrap"
+            >
+              {services[serviceIndex]}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* TEXT & LOGO - Overlay on Mobile Bottom 1/3, Left Column on Desktop */}
       <div className="relative z-20 w-full lg:w-1/2 flex flex-col justify-end lg:justify-center items-center lg:items-start px-6 md:px-12 lg:pl-28 pb-16 lg:pb-0 py-0 lg:py-0 text-center lg:text-left order-2 lg:order-1 bg-transparent lg:bg-white min-h-screen lg:min-h-0">
 
         {/* The dominant 3D Logo - Reduced bottom margin */}
-        <div className="animate-fade-in-up mb-0 lg:mb-2">
+        <div className="animate-fade-in-up mb-0 lg:-mb-6">
           <div className="relative group text-center lg:text-left">
             <img
               src="/ChatGPT Image 24 mars 2026, 22_08_45.png"

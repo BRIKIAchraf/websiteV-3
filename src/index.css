@@ -8,7 +8,7 @@
   --primary: #D4AF37;
   --primary-dark: #B8860B;
   --background: #FCF9F5;
-  --on-surface: #1C1C1A;
+  --on-surface: #000000;
   --surface: #F5F1EB;
   --surface-light: #EBE5DC;
   --gold: #D4AF37;
@@ -18,9 +18,10 @@
 
 @layer base {
   body {
-    @apply bg-background text-on-surface font-sans;
-    font-family: 'Manrope', sans-serif;
+    @apply bg-background text-black font-headline;
+    font-family: 'Cinzel', serif;
     line-height: 1.6;
+    font-weight: normal;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -32,9 +33,13 @@
   }
 
   p {
-     @apply text-on-surface font-bold;
-     font-size: 24px !important;
+     color: #000000 !important;
+     font-weight: normal !important;
+     font-family: 'Cinzel', serif !important;
+     font-size: 15px !important;
+     text-transform: none !important;
   }
+
 
   .shimmer-text {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-dark to-gold animate-shimmer bg-[length:200%_auto];

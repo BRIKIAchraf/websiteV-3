@@ -17,6 +17,14 @@ export const allProjects: Project[] = [
     url: 'https://prestige-clean4-d.vercel.app/'
   },
   {
+    id: 9,
+    image: '/public/3.png',
+    title: 'Faire',
+    description: 'Plateforme Marketplace B2B connectant commerçants et marques.',
+    category: 'E-commerce',
+    url: 'https://www.faire.com/'
+  },
+  {
     id: 2,
     image: '/2.png',
     title: 'Krid Energy',
@@ -39,6 +47,13 @@ export const allProjects: Project[] = [
     description: 'Portail de services de sécurité avec un fort accent sur l\'UX et le SEO local.',
     category: 'Web Services',
     url: 'https://www.serruresafe.fr/'
+  }, {
+    id: 8,
+    image: '/public/11.png',
+    title: 'Résidence Ilyes',
+    description: 'Site vitrine pour promotion immobilière et résidences de standing.',
+    category: 'Real Estate',
+    url: 'https://residenceilyes.com/'
   },
   {
     id: 5,
@@ -64,20 +79,6 @@ export const allProjects: Project[] = [
     category: 'Maintenance',
     url: 'https://pro-inox-depannage.fr/'
   },
-  {
-    id: 8,
-    image: '/public/11.png',
-    title: 'Résidence Ilyes',
-    description: 'Site vitrine pour promotion immobilière et résidences de standing.',
-    category: 'Real Estate',
-    url: 'https://residenceilyes.com/'
-  },
-  {
-    id: 9,
-    image: '/public/3.png',
-    title: 'Faire',
-    description: 'Plateforme Marketplace B2B connectant commerçants et marques.',
-    category: 'E-commerce',
-    url: 'https://www.faire.com/'
-  }
+
+
 ];

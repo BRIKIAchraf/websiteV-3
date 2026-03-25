@@ -79,19 +79,20 @@ export default function Certifications() {
   return (
     <div className="pt-28 pb-20 px-6 md:px-12 bg-background min-h-screen">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Header Section */}
-        <div className="mb-20 animate-fade-in text-center">
-          <h1 className="font-headline tracking-tighter text-charcoal mb-8 leading-tight">
-            Études & <span className="shimmer-text">Certifications</span>
+        <div className="mb-16 animate-fade-in text-center">
+          <h1 className="font-bold text-on-surface mb-3 font-headline">
+            Études <span className="shimmer-text">Certifications</span>
           </h1>
-          <p className="text-charcoal/60 max-w-2xl mx-auto font-body leading-relaxed">
+          <div className="h-[2px] w-20 bg-gold rounded-full mx-auto mb-8" />
+          <p className="text-on-surface/60 max-w-2xl mx-auto leading-relaxed">
             Un parcours académique et professionnel rigoureux pour garantir une expertise à la pointe du digital.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-24">
-          
+
           {/* Education Block */}
           <div className="animate-fade-in-up">
             <div className="flex items-center gap-4 mb-12">
@@ -102,7 +103,7 @@ export default function Certifications() {
                 Études <span className="shimmer-text italic">Académiques</span>
               </h2>
             </div>
-            
+
             <div className="space-y-12">
               {education.map((item, index) => (
                 <div key={index} className="relative pl-8 border-l-2 border-gold/10 hover:border-gold/30 transition-colors">
@@ -150,7 +151,7 @@ export default function Certifications() {
                   <p className="text-charcoal/60 text-sm mb-6 leading-relaxed">
                     {item.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {item.technologies.map((tech, tIndex) => (
                       <span key={tIndex} className="px-3 py-1 bg-charcoal/5 text-charcoal/40 text-[9px] font-black tracking-wider uppercase rounded-full flex items-center gap-1.5 grayscale hover:grayscale-0 transition-all border border-transparent hover:border-gold/20 leading-none">

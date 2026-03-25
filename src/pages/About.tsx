@@ -11,9 +11,10 @@ export default function About() {
           <span className="text-gold font-label text-sm tracking-wider font-bold uppercase block mb-4">
             {t('nav_about')}
           </span>
-          <h1 className="font-headline font-bold text-charcoal tracking-tighter mb-8 leading-[0.9]">
+          <h1 className="font-headline font-bold text-charcoal tracking-tighter mb-3 leading-[0.9]">
             <span className="shimmer-text"><AnimatedText text={t('about_title')} /></span>
           </h1>
+          <div className="h-[2px] w-20 bg-gold rounded-full mb-8" />
           <p className="text-charcoal/60 font-medium leading-relaxed max-w-2xl">
             {t('about_subtitle')}
           </p>

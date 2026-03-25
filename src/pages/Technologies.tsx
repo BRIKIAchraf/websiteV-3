@@ -49,10 +49,10 @@ export default function Technologies() {
     <div className="pt-24 pb-10 px-6 md:px-12 bg-background min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in text-center">
-          <h1 className="font-bold text-on-surface mb-6 font-headline">
+          <h1 className="font-bold text-on-surface mb-3 font-headline">
             Maîtrise <span className="shimmer-text">Technique</span>
           </h1>
-          <div className="h-1 w-24 bg-gold mx-auto mb-8"></div>
+          <div className="h-[2px] w-20 bg-gold rounded-full mx-auto mb-8" />
           <p className="text-on-surface/30 max-w-3xl mx-auto leading-relaxed">
             Un aperçu des environnements et des technologies qui façonnent mon quotidien d'artisan digital.
           </p>

@@ -12,10 +12,14 @@ export default function ProjectsGallery() {
 
         {/* Section heading */}
         <div className="mb-8 animate-fade-in">
-          <h2 className="font-headline tracking-tighter text-charcoal mb-3">
+
+
+        </div>
+        <div className="mb-16 animate-fade-in text-center">
+          <h1 className="font-bold text-on-surface mb-3 font-headline">
             Projets <span className="shimmer-text">Sélectionnés</span>
-          </h2>
-          <div className="h-[2px] w-20 bg-gold rounded-full" />
+          </h1>
+          <div className="h-[2px] w-20 bg-gold rounded-full mx-auto mb-8" />
         </div>
 
         {/* Horizontal scroll strip */}

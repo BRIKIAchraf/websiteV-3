@@ -17,8 +17,9 @@ export default function Header() {
 
     const navLinks = [
         { name: t('nav_home'), path: '/' },
-        { name: t('nav_projects'), path: '/projects' },
         { name: t('nav_about'), path: '/about' },
+        { name: t('nav_projects'), path: '/projects' },
+
         { name: t('nav_technologies'), path: '/technologies' },
         { name: t('nav_blog'), path: '/blog' },
         { name: t('nav_certifications'), path: '/certifications' },
@@ -53,15 +54,6 @@ export default function Header() {
 
                     {/* Center Slot: Desktop Search & Nav (Always Centered) */}
                     <div className="hidden md:flex flex-none items-center gap-8">
-                        {/* Search Bar */}
-                        <div className="relative group w-48 lg:w-64">
-                            <input
-                                type="text"
-                                placeholder={t('search_placeholder')}
-                                className="w-full bg-charcoal/5 border border-charcoal/10 rounded-full py-2 pl-10 pr-4 text-xs font-label focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all"
-                            />
-                            <Search size={14} className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal/40 group-focus-within:text-gold transition-colors" />
-                        </div>
 
                         {/* Navigation */}
                         <nav className="flex items-center gap-1">
@@ -83,7 +75,15 @@ export default function Header() {
                             ))}
                         </nav>
                     </div>
-
+                    {/* Search Bar */}
+                    <div className="relative group w-48 lg:w-64">
+                        <input
+                            type="text"
+                            placeholder={t('search_placeholder')}
+                            className="w-full bg-charcoal/5 border border-charcoal/10 rounded-full py-2 pl-10 pr-4 text-xs font-label focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all"
+                        />
+                        <Search size={14} className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal/40 group-focus-within:text-gold transition-colors" />
+                    </div>
                     {/* Right Slot: Actions & Mobile Toggle */}
                     <div className="flex-1 flex items-center justify-end gap-4">
                         <div className="hidden md:flex items-center gap-4">

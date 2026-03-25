@@ -64,9 +64,9 @@ export default {
       },
       fontFamily: {
         'headline': ['Cinzel', 'serif'],
-        'body': ['Manrope', 'sans-serif'],
-        'label': ['Manrope', 'sans-serif'],
-        'interface': ['Manrope', 'sans-serif'],
+        'body': ['Cinzel', 'serif'],
+        'label': ['Cinzel', 'serif'],
+        'interface': ['Cinzel', 'serif'],
         'calligraphy': ['"Aref Ruqaa"', 'serif']
       },
       borderRadius: {
