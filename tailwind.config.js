@@ -63,11 +63,11 @@ export default {
         }
       },
       fontFamily: {
-        'headline': ['Cinzel', 'serif'],
-        'body': ['Cormorant Garamond', 'serif'],
+        'headline': ['Manrope', 'sans-serif'],
+        'body': ['Manrope', 'sans-serif'],
         'label': ['Manrope', 'sans-serif'],
         'interface': ['Manrope', 'sans-serif'],
-        'calligraphy': ['"Aref Ruqaa"', 'serif']
+        'calligraphy': ['Manrope', 'sans-serif']
       },
       borderRadius: {
         'DEFAULT': '0.25rem',

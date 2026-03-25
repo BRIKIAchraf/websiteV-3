@@ -16,7 +16,7 @@ export default function Footer() {
         </Link>
 
         {/* Copyright - Reduced margin/gap */}
-        <p className="text-on-surface/40 text-[9px] font-bold tracking-[0.2em] text-center -mt-2">
+        <p className="text-black text-[9px] font-bold tracking-[0.2em] text-center -mt-2">
           © 2024 AB Web & Digital Solutions — Tous Droits Réservés
         </p>
 

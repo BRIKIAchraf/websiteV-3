@@ -39,10 +39,10 @@ export default function ProjectsCarousel() {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-12">
           <div>
-            <h2 className="text-5xl md:text-6xl font-headline font-black text-primary mb-2">
+            <h2 className="text-[17px] font-headline font-black text-black mb-2">
               Voir mes travaux
             </h2>
-            <p className="text-secondary opacity-80 text-lg font-body">
+            <p className="text-black font-bold text-lg font-body">
               Découvrez une sélection de mes projets récents
             </p>
           </div>
@@ -77,8 +77,8 @@ export default function ProjectsCarousel() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gold-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                  <h3 className="text-white font-headline font-bold text-2xl mb-2">{project.title}</h3>
-                  <p className="text-white/80 text-sm font-body tracking-widest">{project.category}</p>
+                  <h3 className="text-white font-headline font-bold text-[17px] mb-2">{project.title}</h3>
+                  <p className="text-black font-bold text-sm font-body tracking-widest">{project.category}</p>
                 </div>
               </div>
             </div>

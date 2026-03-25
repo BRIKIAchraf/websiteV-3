@@ -20,13 +20,27 @@
 @layer base {
   body {
     @apply bg-background text-on-surface font-sans;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', sans-serif !important;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Manrope', sans-serif;
+    @apply font-bold;
+    font-family: 'Manrope', sans-serif !important;
     line-height: 1.1;
     color: var(--on-surface);
+  }
+
+  h2, h3 {
+     font-size: 17px !important;
+  }
+
+  p, span, div {
+     /* We will apply text-black and font-bold more specifically in components 
+        but setting a base here is a good safety net */
+  }
+
+  p {
+     @apply text-black font-bold;
   }
 
   * {

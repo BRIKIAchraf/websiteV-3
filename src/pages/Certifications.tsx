@@ -82,10 +82,10 @@ export default function Certifications() {
         
         {/* Header Section */}
         <div className="mb-20 animate-fade-in text-center">
-          <h1 className="text-5xl md:text-8xl font-headline tracking-tighter text-charcoal mb-8 leading-tight">
+          <h1 className="text-5xl md:text-8xl font-headline tracking-tighter text-black mb-8 leading-tight">
             Études & <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-dark to-gold animate-shimmer bg-[length:200%_auto]">Certifications</span>
           </h1>
-          <p className="text-charcoal/60 text-xl md:text-2xl max-w-2xl mx-auto font-body leading-relaxed">
+          <p className="text-black font-bold text-xl md:text-2xl max-w-2xl mx-auto font-body leading-relaxed">
             Un parcours académique et professionnel rigoureux pour garantir une expertise à la pointe du digital.
           </p>
         </div>
@@ -98,7 +98,7 @@ export default function Certifications() {
               <div className="p-3 bg-gold/10 rounded-2xl text-gold">
                 <GraduationCap size={28} />
               </div>
-              <h2 className="text-3xl font-headline font-black text-charcoal tracking-tighter">
+              <h2 className="text-[17px] font-headline font-black text-black tracking-tighter">
                 Études <span className="text-gold italic">Académiques</span>
               </h2>
             </div>
@@ -111,10 +111,10 @@ export default function Certifications() {
                     <Calendar size={12} />
                     {item.period}
                   </div>
-                  <h3 className="text-xl font-headline font-bold text-charcoal mb-2 leading-tight">
+                  <h3 className="text-[17px] font-headline font-bold text-black mb-2 leading-tight">
                     {item.degree}
                   </h3>
-                  <p className="text-charcoal/80 font-bold mb-2">{item.institution}</p>
+                  <p className="text-black font-bold mb-2">{item.institution}</p>
                   <div className="flex items-center gap-2 text-charcoal/40 text-xs text-capitalize">
                     <MapPin size={12} />
                     {item.location}
@@ -130,7 +130,7 @@ export default function Certifications() {
               <div className="p-3 bg-gold/10 rounded-2xl text-gold">
                 <Briefcase size={28} />
               </div>
-              <h2 className="text-3xl font-headline font-black text-charcoal tracking-tighter">
+              <h2 className="text-[17px] font-headline font-black text-black tracking-tighter">
                 Parcours <span className="text-gold italic">Professionnel</span>
               </h2>
             </div>
@@ -143,11 +143,11 @@ export default function Certifications() {
                     <Calendar size={12} />
                     {item.period}
                   </div>
-                  <h3 className="text-xl font-headline font-bold text-charcoal mb-1 leading-tight">
+                  <h3 className="text-[17px] font-headline font-bold text-black mb-1 leading-tight">
                     {item.role}
                   </h3>
                   <p className="text-gold font-bold mb-4">{item.company}</p>
-                  <p className="text-charcoal/60 text-sm mb-6 leading-relaxed">
+                  <p className="text-black font-bold text-sm mb-6 leading-relaxed">
                     {item.description}
                   </p>
                   
@@ -172,7 +172,7 @@ export default function Certifications() {
             <div className="p-3 bg-gold/10 rounded-2xl text-gold">
               <Award size={28} />
             </div>
-            <h2 className="text-3xl font-headline font-black text-charcoal tracking-tighter">
+            <h2 className="text-[17px] font-headline font-black text-black tracking-tighter">
               Mes <span className="text-gold italic">Certifications</span>
             </h2>
           </div>
@@ -184,8 +184,8 @@ export default function Certifications() {
                   <Calendar size={12} />
                   {cert.date}
                 </div>
-                <h3 className="text-lg font-headline font-bold text-charcoal mb-2 group-hover:text-gold transition-colors leading-tight">{cert.title}</h3>
-                <p className="text-charcoal/40 text-sm font-body">{cert.issuer}</p>
+                <h3 className="text-[17px] font-headline font-bold text-black mb-2 group-hover:text-gold transition-colors leading-tight">{cert.title}</h3>
+                <p className="text-black font-bold text-sm font-body">{cert.issuer}</p>
               </div>
             ))}
           </div>

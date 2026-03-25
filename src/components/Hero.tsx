@@ -67,12 +67,12 @@ export default function Hero() {
 
         {/* Catchphrase / Subtitle - Title Case and tight spacing */}
         <div className="animate-fade-in-up delay-150 max-w-xl">
-          <p className="text-white/40 lg:text-charcoal/40 font-headline font-bold text-xs md:text-sm tracking-[0.2em] mb-3 lg:mb-4 flex items-center gap-4 justify-center lg:justify-start">
+          <p className="text-black font-bold font-headline text-xs md:text-sm tracking-[0.2em] mb-3 lg:mb-4 flex items-center gap-4 justify-center lg:justify-start">
             <span className="w-8 h-px bg-gold/30" />
             Expertise & Innovation
             <span className="w-8 h-px bg-gold/30" />
           </p>
-          <h2 className="text-2xl md:text-3xl lg:text-1xl font-headline font-black text-white lg:text-charcoal leading-tight mb-6 lg:mb-6">
+          <h2 className="text-[17px] font-headline font-black text-black leading-tight mb-6 lg:mb-6">
             L'expertise technologique au service de <span className="text-gold italic">l'élégance</span> numérique.
           </h2>
 

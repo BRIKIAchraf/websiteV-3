@@ -94,13 +94,6 @@ export default function Header() {
                                 <Globe size={16} />
                                 {language === 'fr' ? 'EN' : 'FR'}
                             </button>
-
-                            <a
-                                href="mailto:achraf@briki.dev"
-                                className="px-6 py-2.5 bg-gold text-white rounded-full font-label font-black text-[11px] tracking-[0.18em] hover:bg-gold-dark transition-all duration-300 shadow-[0_4px_20px_rgba(212,175,55,0.25)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.4)] active:scale-95"
-                            >
-                                {t('contact_me')}
-                            </a>
                         </div>
 
                         {/* Mobile toggle */}
@@ -136,14 +129,6 @@ export default function Header() {
                         {link.name}
                     </Link>
                 ))}
-
-                <a
-                    href="mailto:achraf@briki.dev"
-                    className="mt-6 px-10 py-4 bg-gold text-white rounded-full font-label font-black text-sm tracking-widest hover:bg-gold-dark transition-all"
-                    onClick={() => setIsMenuOpen(false)}
-                >
-                    {t('contact_me')}
-                </a>
 
                 {/* Mobile Language Switcher */}
                 <button

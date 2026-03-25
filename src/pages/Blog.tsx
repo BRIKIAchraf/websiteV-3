@@ -7,11 +7,11 @@ export default function Blog() {
     <div className="pt-24 pb-10 px-6 md:px-12 bg-background min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-on-surface mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
             Mon <span className="text-gold italic font-serif">Journal</span>
           </h1>
           <div className="h-1 w-24 bg-gold mx-auto mb-8"></div>
-          <p className="text-xl text-on-surface/60 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[17px] text-black font-bold max-w-2xl mx-auto leading-relaxed">
             Réflexions sur le design, le développement et l'innovation technologique.
           </p>
         </div>
@@ -49,12 +49,10 @@ export default function Blog() {
                     {post.readTime}
                   </div>
                 </div>
-
-                <h2 className="text-xl font-bold text-on-surface mb-4 group-hover:text-gold transition-colors line-clamp-2">
+                <h2 className="text-[17px] font-bold text-black mb-4 group-hover:text-gold transition-colors line-clamp-2">
                   {post.title}
                 </h2>
-
-                <p className="text-on-surface/60 text-sm mb-8 line-clamp-3">
+                <p className="text-black font-bold text-sm mb-8 line-clamp-3">
                   {post.excerpt}
                 </p>
 

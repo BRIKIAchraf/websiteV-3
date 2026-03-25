@@ -12,7 +12,7 @@ export default function ProjectsGallery() {
 
         {/* Section heading */}
         <div className="mb-8 animate-fade-in">
-          <h2 className="text-4xl md:text-6xl  tracking-tighter text-charcoal mb-3">
+          <h2 className="text-[17px] tracking-tighter text-black mb-3">
             Projets{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold animate-shimmer bg-[length:200%_auto]">
               Sélectionnés
@@ -57,14 +57,14 @@ export default function ProjectsGallery() {
               {/* Text */}
               <div className="p-7 relative">
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-headline font-bold text-charcoal group-hover:text-gold transition-colors leading-tight">
+                  <h3 className="text-[17px] font-headline font-bold text-black group-hover:text-gold transition-colors leading-tight">
                     {project.title}
                   </h3>
                   <div className="bg-on-surface/5 p-2.5 rounded-full group-hover:bg-gold transition-colors duration-500 flex-shrink-0 ml-3">
                     <ExternalLink size={16} className="text-on-surface group-hover:text-white transition-colors" />
                   </div>
                 </div>
-                <p className="text-charcoal/50 text-sm font-body leading-relaxed line-clamp-2">
+                <p className="text-black font-bold text-sm font-body leading-relaxed line-clamp-2">
                   {project.description}
                 </p>
                 <div className="h-[1px] w-0 bg-gold group-hover:w-full transition-all duration-700 mt-5" />
