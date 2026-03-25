@@ -34,7 +34,7 @@ export default function BlogPost() {
               {post.date}
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline tracking-tighter text-black leading-[0.9] mb-12">
+          <h1 className="font-headline tracking-tighter text-black leading-[0.9] mb-12 shimmer-text">
             {post.title}
           </h1>
         </div>
@@ -70,7 +70,7 @@ export default function BlogPost() {
           {/* Body Text */}
           <div className="lg:col-span-9">
             <div 
-              className="prose prose-xl prose-gold max-w-none text-black font-bold leading-relaxed [&>h3]:text-black [&>h3]:font-headline [&>h3]:text-[17px] [&>h3]:mt-12 [&>h3]:mb-6 [&>p]:mb-8"
+              className="prose prose-xl prose-gold max-w-none text-secondary/80 font-body font-light leading-relaxed [&>h3]:text-primary [&>h3]:font-headline [&>h3]:text-3xl [&>h3]:mt-12 [&>h3]:mb-6 [&>p]:mb-8"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </div>

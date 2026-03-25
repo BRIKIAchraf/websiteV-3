@@ -8,23 +8,23 @@ export default function About() {
     <div className="pt-32 pb-20 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12">
-          <span className="text-gold font-label text-sm tracking-[0.2em] font-bold uppercase block mb-4">
+          <span className="text-gold font-label text-sm tracking-wider font-bold uppercase block mb-4">
             {t('nav_about')}
           </span>
-          <h1 className="text-5xl md:text-7xl font-headline font-bold text-black tracking-tighter mb-8 leading-[0.9]">
-            <AnimatedText text={t('about_title')} />
+          <h1 className="font-headline font-bold text-charcoal tracking-tighter mb-8 leading-[0.9]">
+            <span className="shimmer-text"><AnimatedText text={t('about_title')} /></span>
           </h1>
-          <p className="text-xl md:text-2xl text-black font-bold leading-relaxed max-w-2xl">
+          <p className="text-charcoal/60 font-medium leading-relaxed max-w-2xl">
             {t('about_subtitle')}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div className="space-y-8">
-            <p className="text-lg text-black font-bold leading-relaxed">
+            <p className="text-lg text-charcoal/80 leading-relaxed font-light">
               {t('about_description')}
             </p>
-            <p className="text-lg text-black font-bold leading-relaxed">
+            <p className="text-lg text-charcoal/80 leading-relaxed font-light">
               Notre équipe d'artisans numériques s'engage à transformer vos idées en réalité, avec une précision et un soin apportés à chaque détail. Nous croyons que la technologie doit être à la fois puissante et esthétique.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function About() {
           ].map((stat, i) => (
             <div key={i} className="text-center p-8 bg-charcoal/2 rounded-2xl border border-charcoal/5">
               <div className="text-3xl font-headline font-bold text-gold mb-2">{stat.value}</div>
-              <div className="text-xs font-label font-bold text-black tracking-widest uppercase">{stat.label}</div>
+              <div className="text-xs font-label font-bold text-charcoal/40 tracking-wider uppercase">{stat.label}</div>
             </div>
           ))}
         </div>

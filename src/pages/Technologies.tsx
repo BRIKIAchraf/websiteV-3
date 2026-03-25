@@ -49,13 +49,12 @@ export default function Technologies() {
     <div className="pt-24 pb-10 px-6 md:px-12 bg-background min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
-            Maîtrise <span className="text-gold italic font-serif">Technique</span>
+          <h1 className="font-bold text-on-surface mb-6 font-headline">
+            Maîtrise <span className="shimmer-text">Technique</span>
           </h1>
           <div className="h-1 w-24 bg-gold mx-auto mb-8"></div>
-          <p className="text-[17px] text-black font-bold max-w-2xl mx-auto leading-relaxed">
-            Une sélection rigoureuse des meilleures technologies pour bâtir des solutions robustes, 
-            évolutives et performantes.
+          <p className="text-on-surface/30 max-w-3xl mx-auto leading-relaxed">
+            Un aperçu des environnements et des technologies qui façonnent mon quotidien d'artisan digital.
           </p>
         </div>
 
@@ -69,7 +68,7 @@ export default function Technologies() {
               <div className="mb-8 p-4 bg-background inline-block rounded-2xl shadow-sm">
                 {group.icon}
               </div>
-              <h2 className="text-[17px] font-bold text-black mb-8 tracking-tight">
+              <h2 className="font-bold text-on-surface mb-8 tracking-tighter font-headline">
                 {group.category}
               </h2>
               
@@ -81,9 +80,9 @@ export default function Technologies() {
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-gold">{tech.icon}</span>
-                      <span className="text-sm font-bold text-black">{tech.name}</span>
+                      <span className="text-sm font-semibold text-on-surface">{tech.name}</span>
                     </div>
-                    <span className="text-[10px] font-bold text-gold/60 tracking-widest">{tech.level}</span>
+                    <span className="text-[10px] font-bold text-gold/60 tracking-wider uppercase">{tech.level}</span>
                   </div>
                 ))}
               </div>

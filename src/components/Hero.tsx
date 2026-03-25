@@ -67,14 +67,14 @@ export default function Hero() {
 
         {/* Catchphrase / Subtitle - Title Case and tight spacing */}
         <div className="animate-fade-in-up delay-150 max-w-xl">
-          <p className="text-black font-bold font-headline text-xs md:text-sm tracking-[0.2em] mb-3 lg:mb-4 flex items-center gap-4 justify-center lg:justify-start">
+          <p className="text-charcoal/60 font-headline font-bold text-xs tracking-[0.2em] mb-3 lg:mb-4 flex items-center gap-4 justify-center lg:justify-start">
             <span className="w-8 h-px bg-gold/30" />
             Expertise & Innovation
             <span className="w-8 h-px bg-gold/30" />
           </p>
-          <h2 className="text-[17px] font-headline font-black text-black leading-tight mb-6 lg:mb-6">
-            L'expertise technologique au service de <span className="text-gold italic">l'élégance</span> numérique.
-          </h2>
+          <h1 className="font-headline font-black text-white lg:text-charcoal leading-tight mb-6 lg:mb-6">
+            L'expertise technologique au service de l'élégance <span className="shimmer-text">numérique</span>.
+          </h1>
 
           {/* Primary Button */}
           <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start mt-2 lg:mt-4">

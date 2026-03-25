@@ -6,11 +6,11 @@ export default function Projects() {
     <div className="pt-24 pb-10 px-6 md:px-12 bg-background min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
-            Tous Mes <span className="text-gold italic font-serif">Projets</span>
+          <h1 className="font-bold text-on-surface mb-6 font-headline">
+            Tous Mes <span className="shimmer-text">Projets</span>
           </h1>
           <div className="h-1 w-24 bg-gold mx-auto mb-8"></div>
-          <p className="text-[17px] text-black font-bold max-w-2xl mx-auto leading-relaxed">
+          <p className="text-on-surface/60 max-w-2xl mx-auto leading-relaxed">
             Une collection complète de mes travaux en design et développement,
             axée sur la performance et l'expérience utilisateur.
           </p>
@@ -38,9 +38,13 @@ export default function Projects() {
               </div>
 
               <div className="p-8">
-                <span className="text-gold text-xs font-bold tracking-widest mb-2 block uppercase">{project.category}</span>
-                <h3 className="text-[17px] font-bold text-black mb-4 group-hover:text-gold transition-colors">{project.title}</h3>
-                <p className="text-black font-bold text-sm mb-6 line-clamp-2">
+                <span className="text-gold text-xs font-bold tracking-wider mb-2 block uppercase font-label">
+                  {project.category}
+                </span>
+                <h3 className="font-bold text-on-surface mb-4 group-hover:text-gold transition-colors font-headline">
+                  {project.title}
+                </h3>
+                <p className="text-on-surface/60 text-sm mb-6 line-clamp-2">
                   {project.description}
                 </p>
                 <div className="flex items-center justify-between">

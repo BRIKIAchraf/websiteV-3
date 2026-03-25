@@ -82,10 +82,10 @@ export default function Certifications() {
         
         {/* Header Section */}
         <div className="mb-20 animate-fade-in text-center">
-          <h1 className="text-5xl md:text-8xl font-headline tracking-tighter text-black mb-8 leading-tight">
-            Études & <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-dark to-gold animate-shimmer bg-[length:200%_auto]">Certifications</span>
+          <h1 className="font-headline tracking-tighter text-charcoal mb-8 leading-tight">
+            Études & <span className="shimmer-text">Certifications</span>
           </h1>
-          <p className="text-black font-bold text-xl md:text-2xl max-w-2xl mx-auto font-body leading-relaxed">
+          <p className="text-charcoal/60 max-w-2xl mx-auto font-body leading-relaxed">
             Un parcours académique et professionnel rigoureux pour garantir une expertise à la pointe du digital.
           </p>
         </div>
@@ -98,8 +98,8 @@ export default function Certifications() {
               <div className="p-3 bg-gold/10 rounded-2xl text-gold">
                 <GraduationCap size={28} />
               </div>
-              <h2 className="text-[17px] font-headline font-black text-black tracking-tighter">
-                Études <span className="text-gold italic">Académiques</span>
+              <h2 className="font-headline font-black text-charcoal tracking-tighter">
+                Études <span className="shimmer-text italic">Académiques</span>
               </h2>
             </div>
             
@@ -111,10 +111,10 @@ export default function Certifications() {
                     <Calendar size={12} />
                     {item.period}
                   </div>
-                  <h3 className="text-[17px] font-headline font-bold text-black mb-2 leading-tight">
+                  <h3 className="font-headline font-bold text-charcoal mb-2 leading-tight">
                     {item.degree}
                   </h3>
-                  <p className="text-black font-bold mb-2">{item.institution}</p>
+                  <p className="text-charcoal/80 font-bold mb-2">{item.institution}</p>
                   <div className="flex items-center gap-2 text-charcoal/40 text-xs text-capitalize">
                     <MapPin size={12} />
                     {item.location}
@@ -130,8 +130,8 @@ export default function Certifications() {
               <div className="p-3 bg-gold/10 rounded-2xl text-gold">
                 <Briefcase size={28} />
               </div>
-              <h2 className="text-[17px] font-headline font-black text-black tracking-tighter">
-                Parcours <span className="text-gold italic">Professionnel</span>
+              <h2 className="font-headline font-black text-charcoal tracking-tighter">
+                Parcours <span className="shimmer-text italic">Professionnel</span>
               </h2>
             </div>
 
@@ -143,17 +143,17 @@ export default function Certifications() {
                     <Calendar size={12} />
                     {item.period}
                   </div>
-                  <h3 className="text-[17px] font-headline font-bold text-black mb-1 leading-tight">
+                  <h3 className="font-headline font-bold text-charcoal mb-1 leading-tight">
                     {item.role}
                   </h3>
                   <p className="text-gold font-bold mb-4">{item.company}</p>
-                  <p className="text-black font-bold text-sm mb-6 leading-relaxed">
+                  <p className="text-charcoal/60 text-sm mb-6 leading-relaxed">
                     {item.description}
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
                     {item.technologies.map((tech, tIndex) => (
-                      <span key={tIndex} className="px-3 py-1 bg-charcoal/5 text-charcoal/40 text-[9px] font-black tracking-widest rounded-full flex items-center gap-1.5 grayscale hover:grayscale-0 transition-all border border-transparent hover:border-gold/20 leading-none">
+                      <span key={tIndex} className="px-3 py-1 bg-charcoal/5 text-charcoal/40 text-[9px] font-black tracking-wider uppercase rounded-full flex items-center gap-1.5 grayscale hover:grayscale-0 transition-all border border-transparent hover:border-gold/20 leading-none">
                         <Code2 size={10} className="text-gold/60" />
                         {tech}
                       </span>
@@ -172,20 +172,20 @@ export default function Certifications() {
             <div className="p-3 bg-gold/10 rounded-2xl text-gold">
               <Award size={28} />
             </div>
-            <h2 className="text-[17px] font-headline font-black text-black tracking-tighter">
-              Mes <span className="text-gold italic">Certifications</span>
+            <h2 className="font-headline font-black text-charcoal tracking-tighter">
+              Mes <span className="shimmer-text italic">Certifications</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert) => (
               <div key={cert.id} className="group p-8 bg-white rounded-[2.5rem] shadow-xl border border-charcoal/5 hover:border-gold/30 transition-all duration-700">
-                <div className="mb-4 flex items-center gap-3 text-gold/60 text-[9px] font-black tracking-[0.2em] uppercase">
+                <div className="mb-4 flex items-center gap-3 text-gold/60 text-[9px] font-black tracking-wider uppercase">
                   <Calendar size={12} />
                   {cert.date}
                 </div>
-                <h3 className="text-[17px] font-headline font-bold text-black mb-2 group-hover:text-gold transition-colors leading-tight">{cert.title}</h3>
-                <p className="text-black font-bold text-sm font-body">{cert.issuer}</p>
+                <h3 className="font-headline font-bold text-charcoal mb-2 group-hover:text-gold transition-colors leading-tight shimmer-text">{cert.title}</h3>
+                <p className="text-charcoal/40 text-sm font-body">{cert.issuer}</p>
               </div>
             ))}
           </div>

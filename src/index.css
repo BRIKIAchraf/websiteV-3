@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Cinzel:wght@400;700;900&family=Aref+Ruqaa:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -20,27 +19,25 @@
 @layer base {
   body {
     @apply bg-background text-on-surface font-sans;
-    font-family: 'Manrope', sans-serif !important;
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
-    font-family: 'Manrope', sans-serif !important;
+    font-family: 'Cinzel', serif;
+    font-size: 24px !important;
     line-height: 1.1;
     color: var(--on-surface);
-  }
-
-  h2, h3 {
-     font-size: 17px !important;
-  }
-
-  p, span, div {
-     /* We will apply text-black and font-bold more specifically in components 
-        but setting a base here is a good safety net */
+    @apply tracking-tighter;
   }
 
   p {
-     @apply text-black font-bold;
+     @apply text-on-surface font-bold;
+     font-size: 24px !important;
+  }
+
+  .shimmer-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-dark to-gold animate-shimmer bg-[length:200%_auto];
   }
 
   * {

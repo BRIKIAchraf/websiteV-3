@@ -69,7 +69,7 @@ export default function Header() {
                                 <Link
                                     key={link.path}
                                     to={link.path}
-                                    className={`relative px-4 py-2 font-label text-[11px] font-bold tracking-[0.18em] transition-all duration-300 rounded-lg group ${location.pathname === link.path
+                                    className={`relative px-4 py-2 font-headline text-[13px] font-bold tracking-tighter transition-all duration-300 rounded-lg group ${location.pathname === link.path
                                         ? 'text-gold'
                                         : 'text-charcoal hover:text-gold'
                                         }`}
