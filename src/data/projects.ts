@@ -38,7 +38,7 @@ export const allProjects: Project[] = [
   },
   {
     id: 10,
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80',
+    image: '/capture1.png',
     title: 'Eco Mobile App',
     description: 'Application mobile de suivi de consommation énergétique en temps réel.',
     description_en: 'Mobile application for real-time energy consumption tracking.',
@@ -47,7 +47,7 @@ export const allProjects: Project[] = [
   },
   {
     id: 11,
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80',
+    image: '/capture2.png',
     title: 'Brand Identity - Artisans',
     description: 'Création d\'une identité visuelle complète pour un collectif d\'artisans.',
     description_en: 'Creation of a complete visual identity for an artisans collective.',
@@ -56,7 +56,7 @@ export const allProjects: Project[] = [
   },
   {
     id: 12,
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80',
+    image: '/capture3.png',
     title: 'Sponsoring Campaign 2024',
     description: 'Gestion stratégique de partenariats et sponsoring pour événements tech.',
     description_en: 'Strategic management of partnerships and sponsoring for tech events.',
@@ -65,7 +65,7 @@ export const allProjects: Project[] = [
   },
   {
     id: 13,
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80',
+    image: '/capture4.png',
     title: 'Performance Ads Strategy',
     description: 'Campagnes publicitaires ciblées à haute conversion sur Meta et Google.',
     description_en: 'Targeted high-conversion advertising campaigns on Meta and Google.',
@@ -98,5 +98,23 @@ export const allProjects: Project[] = [
     description_en: 'Showcase site for real estate promotion and luxury residences.',
     category: 'WEB',
     url: 'https://residenceilyes.com/'
+  },
+  {
+    id: 14,
+    image: '/capture-pro-inox.png',
+    title: 'Pro Inox Dépannage',
+    description: 'Site professionnel vitrine pour services de dépannage, maintenance et installation.',
+    description_en: 'Professional showcase site for repair, maintenance, and installation services.',
+    category: 'WEB',
+    url: 'https://pro-inox-depannage.fr/'
+  },
+  {
+    id: 15,
+    image: '/capture-eco-tech.png',
+    title: 'Eco Tech Energy',
+    description: 'Plateforme dédiée aux solutions énergétiques avancées et écologiques.',
+    description_en: 'Platform dedicated to advanced and ecological energy solutions.',
+    category: 'WEB',
+    url: 'https://www.eco-tech-energy.fr/'
   }
 ];
