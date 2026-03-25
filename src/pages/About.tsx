@@ -16,7 +16,7 @@ export default function About() {
           </h1>
           <div className="h-[2px] w-20 bg-gold rounded-full mb-8" />
           <p className="text-charcoal/60 font-medium leading-relaxed max-w-2xl">
-            {t('about_subtitle')}
+            {t('about_subtitle_2')}
           </p>
         </div>
 

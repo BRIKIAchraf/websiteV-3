@@ -2,9 +2,11 @@ import { allProjects as projects } from '../data/projects';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function ProjectsGallery() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { t, language } = useLanguage();
 
   return (
     <section id="projects" className="py-12 bg-background relative overflow-hidden">
@@ -17,7 +19,7 @@ export default function ProjectsGallery() {
         </div>
         <div className="mb-16 animate-fade-in text-center">
           <h1 className="font-bold text-on-surface mb-3 font-headline">
-            Projets <span className="shimmer-text">Sélectionnés</span>
+            {t('projects_title_1')} <span className="shimmer-text">{t('projects_title_2')}</span>
           </h1>
           <div className="h-[2px] w-20 bg-gold rounded-full mx-auto mb-8" />
         </div>
@@ -66,7 +68,7 @@ export default function ProjectsGallery() {
                   </div>
                 </div>
                 <p className="text-charcoal/50 text-sm font-body leading-relaxed line-clamp-2">
-                  {project.description}
+                  {language === 'en' ? project.description_en : project.description}
                 </p>
                 <div className="h-[1px] w-0 bg-gold group-hover:w-full transition-all duration-700 mt-5" />
               </div>
@@ -80,7 +82,7 @@ export default function ProjectsGallery() {
             to="/projects"
             className="group inline-flex items-center gap-3 px-10 py-4 bg-charcoal text-white font-headline font-bold tracking-widest text-sm rounded-full border border-gold/20 hover:bg-gold hover:text-charcoal hover:border-gold transition-all duration-400 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.3)]"
           >
-            Voir Tous Les Projets
+            {t('projects_cta')}
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

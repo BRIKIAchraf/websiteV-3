@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search, Globe } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Header() {
@@ -89,10 +89,19 @@ export default function Header() {
                         <div className="hidden md:flex items-center gap-4">
                             <button
                                 onClick={toggleLanguage}
-                                className="p-2.5 rounded-full bg-charcoal/5 text-charcoal hover:bg-gold/10 hover:text-gold transition-all duration-300 flex items-center gap-2 font-label text-[10px] font-black tracking-widest uppercase"
+                                className="group flex items-center gap-2 p-1 pr-3 rounded-full bg-charcoal/5 hover:bg-gold/10 transition-all duration-300"
                             >
-                                <Globe size={16} />
-                                {language === 'fr' ? 'EN' : 'FR'}
+                                <div className="flex items-center bg-white border border-charcoal/10 rounded-full p-1 shadow-sm group-hover:border-gold/30 transition-all">
+                                    <div className={`w-8 h-8 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'fr' ? 'border-2 border-gold scale-110 shadow-sm' : 'opacity-40'}`}>
+                                        <img src="https://flagcdn.com/w40/fr.png" alt="Français" className="w-full h-full object-cover" />
+                                    </div>
+                                    <div className={`w-8 h-8 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'en' ? 'border-2 border-gold scale-110 shadow-sm' : 'opacity-40'}`}>
+                                        <img src="https://flagcdn.com/w40/gb.png" alt="English" className="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+                                <span className="font-label text-[10px] font-black tracking-widest uppercase text-charcoal group-hover:text-gold transition-colors">
+                                    {language.toUpperCase()}
+                                </span>
                             </button>
                         </div>
 
@@ -136,10 +145,14 @@ export default function Header() {
                         toggleLanguage();
                         setIsMenuOpen(false);
                     }}
-                    className="mt-4 flex items-center gap-3 text-charcoal/40 hover:text-gold font-label text-sm font-bold tracking-widest uppercase transition-colors"
+                    className="mt-8 flex items-center gap-4 px-6 py-3 bg-charcoal/5 rounded-full border border-charcoal/10 transition-all active:scale-95"
                 >
-                    <Globe size={18} />
-                    {language === 'fr' ? 'Switch to English' : 'Passer au Français'}
+                    <div className={`w-12 h-12 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'fr' ? 'ring-4 ring-gold shadow-lg' : 'opacity-40'}`}>
+                        <img src="https://flagcdn.com/w80/fr.png" alt="Français" className="w-full h-full object-cover" />
+                    </div>
+                    <div className={`w-12 h-12 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'en' ? 'ring-4 ring-gold shadow-lg' : 'opacity-40'}`}>
+                        <img src="https://flagcdn.com/w80/gb.png" alt="English" className="w-full h-full object-cover" />
+                    </div>
                 </button>
             </div>
         </>

@@ -1,16 +1,18 @@
 import { useParams, Link } from 'react-router-dom';
 import { blogPosts } from '../data/blog';
 import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function BlogPost() {
   const { id } = useParams();
+  const { t, language } = useLanguage();
   const post = blogPosts.find(p => p.id === id);
 
   if (!post) {
     return (
       <div className="pt-32 pb-20 px-6 text-center bg-background min-h-screen">
-        <h1 className="text-4xl font-headline text-primary">Article non trouvé</h1>
-        <Link to="/blog" className="mt-8 inline-block text-gold hover:underline">Retour au blog</Link>
+        <h1 className="text-4xl font-headline text-primary">{t('blog_not_found')}</h1>
+        <Link to="/blog" className="mt-8 inline-block text-gold hover:underline">{t('blog_back')}</Link>
       </div>
     );
   }
@@ -21,7 +23,7 @@ export default function BlogPost() {
         {/* Navigation */}
         <Link to="/blog" className="inline-flex items-center gap-4 mb-8 text-[10px] font-headline font-black tracking-[0.4em] text-primary/40 hover:text-gold transition-colors group">
           <ArrowLeft size={16} className="group-hover:-translate-x-2 transition-transform" />
-          Retour Au Journal
+          {t('blog_back')}
         </Link>
 
         {/* Header */}
@@ -35,7 +37,7 @@ export default function BlogPost() {
             </div>
           </div>
           <h1 className="font-headline tracking-tighter text-black leading-[0.9] mb-12 shimmer-text">
-            {post.title}
+            {language === 'en' ? post.title_en : post.title}
           </h1>
         </div>
 
@@ -53,7 +55,7 @@ export default function BlogPost() {
           {/* Side Info */}
           <div className="lg:col-span-3 space-y-12">
             <div>
-              <span className="block text-[10px] font-headline font-black tracking-widest text-primary/30 mb-4">Temps de lecture</span>
+              <span className="block text-[10px] font-headline font-black tracking-widest text-primary/30 mb-4">{t('blog_read_time')}</span>
               <p className="flex items-center gap-2 font-headline text-primary">
                 <Clock size={16} className="text-gold" />
                 {post.readTime}
@@ -62,7 +64,7 @@ export default function BlogPost() {
             <div>
               <button className="flex items-center gap-2 text-[10px] font-headline font-black tracking-widest text-primary/40 hover:text-gold transition-colors">
                 <Share2 size={16} />
-                Partager
+                {t('blog_share')}
               </button>
             </div>
           </div>
@@ -71,7 +73,7 @@ export default function BlogPost() {
           <div className="lg:col-span-9">
             <div 
               className="prose prose-xl prose-gold max-w-none text-secondary/80 font-body font-light leading-relaxed [&>h3]:text-primary [&>h3]:font-headline [&>h3]:text-3xl [&>h3]:mt-12 [&>h3]:mb-6 [&>p]:mb-8"
-              dangerouslySetInnerHTML={{ __html: post.content }}
+              dangerouslySetInnerHTML={{ __html: language === 'en' ? post.content_en : post.content }}
             />
           </div>
         </div>
@@ -79,7 +81,7 @@ export default function BlogPost() {
         {/* Footer Navigation */}
         <div className="mt-24 pt-12 border-t border-gold/10 flex justify-center">
             <Link to="/blog" className="relative px-12 py-5 bg-gold text-white font-headline font-bold text-xs tracking-[0.3em] overflow-hidden transition-all duration-500 hover:shadow-2xl">
-                Découvrir D'autres Récits
+                {t('blog_explore_more')}
             </Link>
         </div>
       </div>

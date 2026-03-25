@@ -1,18 +1,20 @@
 import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/blog';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Blog() {
+  const { t, language } = useLanguage();
   return (
     <div className="pt-24 pb-10 px-6 md:px-12 bg-background min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in text-center">
           <h1 className="font-bold text-on-surface mb-3 font-headline">
-            Mon <span className="shimmer-text">Journal</span>
+            {t('blog_title_1')} <span className="shimmer-text">{t('blog_title_2')}</span>
           </h1>
           <div className="h-[2px] w-20 bg-gold rounded-full mx-auto mb-8" />
           <p className="text-on-surface/60 max-w-2xl mx-auto leading-relaxed">
-            Réflexions sur le design, le développement et l'innovation technologique.
+            {t('blog_subtitle')}
           </p>
         </div>
 
@@ -50,14 +52,14 @@ export default function Blog() {
                   </div>
                 </div>
                 <h2 className="font-bold text-on-surface mb-4 group-hover:text-gold transition-colors line-clamp-2 font-headline">
-                  {post.title}
+                  {language === 'en' ? post.title_en : post.title}
                 </h2>
                 <p className="text-on-surface/60 text-sm mb-8 line-clamp-3">
-                  {post.excerpt}
+                  {language === 'en' ? post.excerpt_en : post.excerpt}
                 </p>
 
                 <div className="mt-auto flex items-center gap-2 text-gold font-bold text-xs group-hover:gap-4 transition-all">
-                  Lire La Suite
+                  {t('blog_cta')}
                   <ArrowRight size={16} />
                 </div>
               </div>

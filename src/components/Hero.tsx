@@ -1,7 +1,6 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Palette, Globe, Smartphone, Users, Megaphone, MessageCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
-
-// Pool of photos — add more paths here as you add images to /public/photos/
+import { useLanguage } from '../context/LanguageContext';
 const heroPhotos = [
   '/ChatGPT_Image_Mar_16,_2026,_02_03_38_PM.png',
   // Duplicate so every slot has a fallback until more photos are added
@@ -22,11 +21,18 @@ function getDailyPhoto(): string {
   return heroPhotos[dayOfYear % heroPhotos.length];
 }
 
-const services = ["DESIGN", "WEB", "MOBILE", "SPONSORING", "ADS"];
-
 export default function Hero() {
   const photo = getDailyPhoto();
   const [serviceIndex, setServiceIndex] = useState(0);
+  const { t } = useLanguage();
+
+  const services = [
+    { name: t('service_design'), icon: <Palette size={24} /> },
+    { name: t('service_web'), icon: <Globe size={24} /> },
+    { name: t('service_mobile'), icon: <Smartphone size={24} /> },
+    { name: t('service_sponsoring'), icon: <Users size={24} /> },
+    { name: t('service_ads'), icon: <Megaphone size={24} /> }
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -56,15 +62,37 @@ export default function Hero() {
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black/5 to-transparent z-10 hidden lg:block" />
         </div>
 
-        {/* Desktop-only Decorative Diamond */}
-        <div className="absolute top-1/2 -left-12 -translate-y-1/2 w-24 h-24 bg-white rotate-45 hidden lg:block shadow-[-10px_10px_30px_rgba(0,0,0,0.05)] z-20 border-l border-b border-gold/10 flex items-center justify-center overflow-hidden">
-          <div className="-rotate-45 text-center px-1">
-            <div 
-              key={serviceIndex}
-              className="animate-fade-in text-[10px] font-headline font-bold tracking-[0.2em] text-gold uppercase whitespace-nowrap"
-            >
-              {services[serviceIndex]}
+        {/* Desktop-only Decorative Hexagon / Glassmorphic Badge */}
+        <div className="absolute top-1/2 -left-16 -translate-y-1/2 hidden lg:flex items-center justify-center z-30 group-hover:scale-110 transition-transform duration-700">
+          
+          {/* Animated Gold Ring */}
+          <div className="absolute w-36 h-36 border border-gold/20 rounded-full animate-[spin_10s_linear_infinite]" />
+          <div className="absolute w-36 h-36 border-t-2 border-gold rounded-full animate-[spin_3s_linear_infinite]" />
+          
+          {/* Glass Hexagon Base */}
+          <div className="relative w-32 h-32 bg-white/10 border border-white/30 shadow-[0_20px_50px_rgba(0,0,0,0.1)] flex items-center justify-center overflow-hidden"
+               style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
+            
+            {/* Inner Content Layer */}
+            <div className="absolute inset-x-2 inset-y-2 bg-gradient-to-br from-white/30 to-transparent pointer-events-none" />
+            
+            <div className="flex flex-col items-center justify-center text-center px-2 z-10">
+              <div 
+                key={`icon-${serviceIndex}`}
+                className="animate-fade-in-up text-gold mb-2 drop-shadow-[0_0_15px_rgba(212,175,55,0.6)] scale-110"
+              >
+                {services[serviceIndex].icon}
+              </div>
+              <div 
+                key={`name-${serviceIndex}`}
+                className="animate-fade-in text-[9px] font-headline font-black tracking-[0.2em] text-white uppercase whitespace-nowrap drop-shadow-md"
+              >
+                {services[serviceIndex].name}
+              </div>
             </div>
+
+            {/* Pulsing Glow Overlay */}
+            <div className="absolute inset-0 bg-gold/10 animate-pulse-slow pointer-events-none" />
           </div>
         </div>
       </div>
@@ -89,21 +117,31 @@ export default function Hero() {
         <div className="animate-fade-in-up delay-150 max-w-xl">
           <p className="text-charcoal/60 font-headline font-bold text-xs tracking-[0.2em] mb-3 lg:mb-4 flex items-center gap-4 justify-center lg:justify-start">
             <span className="w-8 h-px bg-gold/30" />
-            Expertise & Innovation
+            {t('hero_expertise')}
             <span className="w-8 h-px bg-gold/30" />
           </p>
           <h1 className="font-headline font-black text-white lg:text-charcoal leading-tight mb-6 lg:mb-6">
-            L'expertise technologique au service de l'élégance <span className="shimmer-text">numérique</span>.
+            {t('hero_title')}
           </h1>
 
           {/* Primary Button */}
-          <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start mt-2 lg:mt-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mt-2 lg:mt-4">
             <a
               href="#projects"
-              className="group relative px-10 py-3.5 lg:py-4 bg-white lg:bg-charcoal text-charcoal lg:text-white rounded-full font-headline font-bold tracking-widest text-sm uppercase overflow-hidden shadow-2xl transition-all active:scale-95"
+              className="group relative px-10 py-3.5 lg:py-4 bg-charcoal text-white rounded-full font-headline font-bold tracking-widest text-sm uppercase overflow-hidden shadow-2xl transition-all active:scale-95"
             >
-              <span className="relative z-10 font-bold uppercase">Nos Projets</span>
+              <span className="relative z-10 font-bold uppercase">{t('hero_cta')}</span>
               <div className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            </a>
+            
+            <a
+              href="https://wa.me/216"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 px-8 py-3.5 lg:py-4 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 rounded-full font-headline font-bold tracking-widest text-sm uppercase transition-all hover:bg-[#25D366] hover:text-white active:scale-95"
+            >
+              <MessageCircle size={20} className="group-hover:animate-bounce" />
+              WhatsApp
             </a>
           </div>
         </div>
