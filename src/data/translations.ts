@@ -66,7 +66,10 @@ export type TranslationKeys =
   | 'service_web'
   | 'service_mobile'
   | 'service_sponsoring'
-  | 'service_ads';
+  | 'service_ads'
+  | 'partners_title_1'
+  | 'partners_title_2'
+  | 'partners_subtitle';
 
 export const translations: Record<Language, Record<string, string>> = {
   fr: {
@@ -135,7 +138,10 @@ export const translations: Record<Language, Record<string, string>> = {
     service_web: 'WEB',
     service_mobile: 'MOBILE',
     service_sponsoring: 'SPONSORING',
-    service_ads: 'ADS'
+    service_ads: 'ADS',
+    partners_title_1: 'notre',
+    partners_title_2: 'partenaires',
+    partners_subtitle: 'ils nous font confiance pour leur présence digitale.'
   },
   en: {
     nav_home: 'home',
@@ -203,6 +209,9 @@ export const translations: Record<Language, Record<string, string>> = {
     service_web: 'WEB',
     service_mobile: 'MOBILE',
     service_sponsoring: 'SPONSORING',
-    service_ads: 'ADS'
+    service_ads: 'ADS',
+    partners_title_1: 'our',
+    partners_title_2: 'partners',
+    partners_subtitle: 'they trust us for their digital digital presence.'
   }
 };
