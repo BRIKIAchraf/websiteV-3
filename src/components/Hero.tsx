@@ -146,7 +146,7 @@ export default function Hero() {
             </a>
             
             <a
-              href="https://wa.me/216"
+              href="https://wa.me/393922437748"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 px-8 py-3.5 lg:py-4 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 rounded-full font-headline font-bold tracking-widest text-sm uppercase transition-all hover:bg-[#25D366] hover:text-white active:scale-95"

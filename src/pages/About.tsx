@@ -29,8 +29,8 @@ export default function About() {
           <div className="relative group">
             <div className="aspect-[4/5] bg-charcoal/5 rounded-2xl overflow-hidden">
               {/* Use generate_image later if needed, for now a placeholder style */}
-              <div className="w-full h-full bg-gradient-to-br from-gold/20 to-charcoal/5 flex items-center justify-center">
-                <span className="text-gold/40 font-headline text-8xl font-black">AB</span>
+              <div className="w-full h-full bg-gradient-to-br from-gold/20 to-charcoal/5 flex items-center justify-center p-12">
+                <img src="/ChatGPT Image 24 mars 2026, 22_08_45.png" alt="AB Logo" className="w-full h-auto object-contain" />
               </div>
             </div>
             <div className="absolute -bottom-6 -right-6 w-48 aspect-square bg-gold/10 rounded-2xl -z-10 transition-transform duration-500 group-hover:translate-x-4 group-hover:translate-y-4" />

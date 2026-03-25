@@ -40,7 +40,7 @@ export default function Footer() {
             { icon: <Linkedin size={18} />, url: 'https://linkedin.com', color: '#0077b5' },
             { icon: <XIcon size={16} />, url: 'https://twitter.com', color: '#000000' },
             { icon: <Github size={18} />, url: 'https://github.com', color: '#333333' },
-            { icon: <MessageCircle size={18} />, url: 'https://wa.me/216', color: '#25D366' },
+            { icon: <MessageCircle size={18} />, url: 'https://wa.me/393922437748', color: '#25D366' },
             { icon: <Mail size={18} />, url: 'mailto:contact@achrafbriki.com', color: '#D4AF37' },
           ].map((social, i) => (
             <a
