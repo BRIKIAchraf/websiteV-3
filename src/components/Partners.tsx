@@ -5,12 +5,15 @@ const partners = [
   { name: 'O Pizzwitchs', logo: '/partners/7.png' },
   { name: 'Ecotech Energy', logo: '/partners/8.png' },
   { name: 'Serrure Safe', logo: '/partners/6.webp' },
-  { name: 'D Clik Serrure', logo: '/partners/4.svg' },
+  { name: 'D Clik Serrure', logo: '/partners/logo 4.svg' },
   { name: 'D Clik Serrure', logo: '/partners/zone.png' },
-  { name: 'achraf', logo: '/partners/11.png' },
-  { name: 'Briki', logo: '/partners/3.png' },
-  { name: 'Faire', logo: '/partners/2.webp' },
+
+  { name: 'Briki', logo: '/partners/Logo 3.png' },
+  { name: 'Faire', logo: '/partners/Logo 2.webp' },
   { name: 'donc', logo: '/partners/11.png' },
+  { name: 'Bellavita', logo: '/partners/logo33.svg' },
+  { name: 'qsmldkfj', logo: '/partners/22.png' },
+  { name: 'Clean', logo: '/partners/Clean.jpeg' },
 ];
 
 export default function Partners() {
@@ -30,12 +33,12 @@ export default function Partners() {
         </div>
       </div>
 
-      <div className="relative flex overflow-hidden group">
-        <div className="flex animate-marquee py-4 hover:[animation-play-state:paused] transition-all duration-500">
-          {[...partners, ...partners, ...partners].map((partner, i) => (
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-wrap justify-center gap-6">
+          {partners.map((partner, i) => (
             <div
               key={i}
-              className="flex-none mx-6 w-48 h-32 bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-charcoal/5 flex items-center justify-center p-6 group/item hover:border-gold/30 hover:shadow-gold/10 transition-all duration-500"
+              className="w-40 sm:w-48 h-28 sm:h-32 bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-charcoal/5 flex items-center justify-center p-4 sm:p-6 group/item hover:border-gold/30 hover:shadow-gold/10 transition-all duration-500"
             >
               <img
                 src={partner.logo}
