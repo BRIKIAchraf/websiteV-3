@@ -2,7 +2,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 const partners = [
   { name: 'Zarzis Park', logo: '/partners/5.png' },
-  { name: 'O Pizzwitchs', logo: '/partners/7.png' },
+  { name: 'O Pizzwitchs', logo: '/partners/55.png' },
   { name: 'Ecotech Energy', logo: '/partners/8.png' },
   { name: 'Serrure Safe', logo: '/partners/6.webp' },
   { name: 'D Clik Serrure', logo: '/partners/logo 4.svg' },
@@ -33,20 +33,28 @@ export default function Partners() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-wrap justify-center gap-6">
-          {partners.map((partner, i) => (
-            <div
-              key={i}
-              className="w-40 sm:w-48 h-28 sm:h-32 bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-charcoal/5 flex items-center justify-center p-4 sm:p-6 group/item hover:border-gold/30 hover:shadow-gold/10 transition-all duration-500"
-            >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="max-w-full max-h-full object-contain transition-all duration-700 scale-90 group-hover/item:scale-100"
-              />
-            </div>
-          ))}
+      <div className="max-w-[85rem] mx-auto px-6">
+        <div className="relative bg-white rounded-[2.5rem] lg:rounded-[4rem] p-10 md:p-16 lg:p-24 border border-charcoal/5 shadow-[0_20px_60px_rgba(0,0,0,0.03)] overflow-hidden">
+          
+          {/* Subtle High-End Glow Effects */}
+          <div className="absolute top-0 right-1/4 w-[40%] h-[40%] bg-gold/5 blur-[80px] rounded-full pointer-events-none" />
+          <div className="absolute bottom-0 left-1/4 w-[40%] h-[40%] bg-charcoal/5 blur-[80px] rounded-full pointer-events-none" />
+
+          {/* Seamless Showcase Layout */}
+          <div className="relative z-10 flex flex-wrap justify-center content-center gap-x-12 sm:gap-x-16 lg:gap-x-24 gap-y-12 sm:gap-y-16">
+            {partners.map((partner, i) => (
+              <div
+                key={i}
+                className="group flex items-center justify-center w-24 sm:w-32 lg:w-40 h-16 sm:h-20 transition-all duration-500"
+              >
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="max-w-full max-h-full object-contain transition-all duration-500 group-hover:scale-110 drop-shadow-sm group-hover:drop-shadow-xl"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
