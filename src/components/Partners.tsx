@@ -1,18 +1,23 @@
 import { useLanguage } from '../context/LanguageContext';
 
 const partners = [
-  { name: 'Zarzis Park', logo: '/partners/zarzis.png' },
-  { name: 'O Pizzwitchs', logo: '/partners/opizz.png' },
-  { name: 'Ecotech Energy', logo: '/partners/ecotech.png' },
-  { name: 'Serrure Safe', logo: '/partners/safe.png' },
-  { name: 'D Clik Serrure', logo: '/partners/dclik.png' },
+  { name: 'Zarzis Park', logo: '/partners/5.png' },
+  { name: 'O Pizzwitchs', logo: '/partners/7.png' },
+  { name: 'Ecotech Energy', logo: '/partners/8.png' },
+  { name: 'Serrure Safe', logo: '/partners/6.webp' },
+  { name: 'D Clik Serrure', logo: '/partners/4.svg' },
+  { name: 'D Clik Serrure', logo: '/partners/zone.png' },
+  { name: 'achraf', logo: '/partners/11.png' },
+  { name: 'Briki', logo: '/partners/3.png' },
+  { name: 'Faire', logo: '/partners/2.webp' },
+  { name: 'donc', logo: '/partners/11.png' },
 ];
 
 export default function Partners() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-16 bg-surface-container-low overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-12">
         <div className="flex flex-col items-center text-center">
           <h2 className="font-headline font-bold text-charcoal text-3xl md:text-4xl mb-4">
@@ -35,7 +40,7 @@ export default function Partners() {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-w-full max-h-full object-contain filter grayscale group-hover/item:grayscale-0 transition-all duration-700 scale-90 group-hover/item:scale-100"
+                className="max-w-full max-h-full object-contain transition-all duration-700 scale-90 group-hover/item:scale-100"
               />
             </div>
           ))}
