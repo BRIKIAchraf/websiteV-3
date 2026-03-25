@@ -160,7 +160,7 @@ export default function Certifications() {
                 return (
                   <div key={index} className="relative pl-8 border-l-2 border-gold/10 hover:border-gold/30 transition-colors">
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white border-2 border-gold" />
-                    <div className="mb-2 flex items-center gap-3 text-gold/60 text-[10px] font-black tracking-[0.2em] uppercase">
+                    <div className="mb-2 flex items-center gap-3 text-gold/60 text-[10px] font-black">
                       <Calendar size={12} />
                       {content.period}
                     </div>
@@ -209,7 +209,7 @@ export default function Certifications() {
 
                     <div className="flex flex-wrap gap-2">
                       {item.technologies.map((tech, tIndex) => (
-                        <span key={tIndex} className="px-3 py-1 bg-charcoal/5 text-charcoal/40 text-[9px] font-black tracking-wider uppercase rounded-full flex items-center gap-1.5 grayscale hover:grayscale-0 transition-all border border-transparent hover:border-gold/20 leading-none">
+                        <span key={tIndex} className="px-3 py-1 bg-charcoal/5 text-charcoal/40 text-[9px] font-black rounded-full flex items-center gap-1.5 grayscale hover:grayscale-0 transition-all border border-transparent hover:border-gold/20 leading-none">
                           <Code2 size={10} className="text-gold/60" />
                           {tech}
                         </span>
@@ -237,7 +237,7 @@ export default function Certifications() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert) => (
               <div key={cert.id} className="group p-8 bg-white rounded-[2.5rem] shadow-xl border border-charcoal/5 hover:border-gold/30 transition-all duration-700">
-                <div className="mb-4 flex items-center gap-3 text-gold/60 text-[9px] font-black tracking-wider uppercase">
+                <div className="mb-4 flex items-center gap-3 text-gold/60 text-[9px] font-black">
                   <Calendar size={12} />
                   {language === 'en' ? cert.en.date : cert.fr.date}
                 </div>

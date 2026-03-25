@@ -52,7 +52,7 @@ export default function ProjectsGallery() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
                 {/* Category pill */}
-                <span className="absolute top-4 left-4 text-[10px] font-black text-gold/90 bg-charcoal/60 backdrop-blur-sm px-3 py-1 rounded-full tracking-widest border border-gold/20">
+                <span className="absolute top-4 left-4 text-[10px] font-black text-gold/90 bg-charcoal/80 px-3 py-1 rounded-full tracking-widest border border-gold/20">
                   {project.category}
                 </span>
               </div>
@@ -80,7 +80,7 @@ export default function ProjectsGallery() {
         <div className="flex justify-center mt-10 animate-fade-in">
           <Link
             to="/projects"
-            className="group inline-flex items-center gap-3 px-10 py-4 bg-charcoal text-white font-headline font-bold tracking-widest text-sm rounded-full border border-gold/20 hover:bg-gold hover:text-charcoal hover:border-gold transition-all duration-400 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.3)]"
+            className="group inline-flex items-center gap-3 px-10 py-4 bg-charcoal text-white font-headline font-bold text-sm rounded-full border border-gold/20 hover:bg-gold hover:text-charcoal hover:border-gold transition-all duration-400 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.3)]"
           >
             {t('projects_cta')}
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

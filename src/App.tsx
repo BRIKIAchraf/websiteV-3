@@ -10,6 +10,7 @@ import Certifications from './pages/Certifications';
 import Technologies from './pages/Technologies';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import SearchPage from './pages/Search';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:id" element={<BlogPost />} />
               <Route path="/certifications" element={<Certifications />} />
+              <Route path="/search" element={<SearchPage />} />
             </Routes>
           </main>
           <Footer />

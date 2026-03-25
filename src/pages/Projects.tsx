@@ -29,7 +29,7 @@ export default function Projects() {
 
         {/* Filter UI */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-16 animate-fade-in">
-          <div className="flex items-center gap-2 px-4 py-2 bg-charcoal/5 rounded-full text-charcoal/40 font-headline text-[10px] font-black tracking-widest uppercase mb-2 md:mb-0">
+          <div className="flex items-center gap-2 px-4 py-2 bg-charcoal/5 rounded-full text-charcoal/40 font-headline text-[10px] font-black mb-2 md:mb-0">
             <Filter size={12} />
             Filter By
           </div>
@@ -37,7 +37,7 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2 rounded-full font-headline text-[10px] font-black tracking-widest uppercase transition-all duration-300 border ${
+              className={`px-6 py-2 rounded-full font-headline text-[10px] font-black transition-all duration-300 border ${
                 activeCategory === cat
                   ? 'bg-gold border-gold text-white shadow-lg'
                   : 'bg-white border-charcoal/10 text-charcoal/60 hover:border-gold/50'
@@ -70,7 +70,7 @@ export default function Projects() {
               </div>
 
               <div className="p-8">
-                <span className="text-gold text-xs font-bold tracking-wider mb-2 block uppercase font-label">
+                <span className="text-gold text-xs font-bold mb-2 block font-label">
                   {project.category}
                 </span>
                 <h3 className="font-bold text-on-surface mb-4 group-hover:text-gold transition-colors font-headline">

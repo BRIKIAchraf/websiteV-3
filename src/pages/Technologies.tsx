@@ -85,7 +85,7 @@ export default function Technologies() {
                       <span className="text-gold">{tech.icon}</span>
                       <span className="text-sm font-semibold text-on-surface">{tech.name}</span>
                     </div>
-                    <span className="text-[10px] font-bold text-gold/60 tracking-wider uppercase">{tech.level}</span>
+                    <span className="text-[10px] font-bold text-gold/60">{tech.level}</span>
                   </div>
                 ))}
               </div>

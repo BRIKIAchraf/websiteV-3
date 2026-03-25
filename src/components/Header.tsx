@@ -34,86 +34,96 @@ export default function Header() {
             <header
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
                     ? 'bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)] border-b border-charcoal/8'
-                    : 'bg-white/95 backdrop-blur-md border-b border-charcoal/5'
+                    : 'bg-white/95 border-b border-charcoal/5'
                     }`}
             >
-                <div className="max-w-7xl mx-auto px-6 md:px-14 flex items-center justify-between" style={{ height: '80px' }}>
+                <div className="w-full px-6 md:px-12 lg:px-12 flex items-center justify-between relative" style={{ height: '80px' }}>
 
-                    {/* Left Slot: Logo */}
-                    <div className="flex-1 flex items-center">
-                        {location.pathname !== '/' && (
-                            <Link to="/" className="flex items-center group">
-                                <img
-                                    src="/ChatGPT Image 24 mars 2026, 22_08_45.png"
-                                    alt="AB Web & Digital Solutions"
-                                    className="h-20 md:h-24 lg:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                                />
-                            </Link>
-                        )}
-                    </div>
-
-                    {/* Center Slot: Desktop Search & Nav (Always Centered) */}
-                    <div className="hidden md:flex flex-none items-center gap-8">
-
-                        {/* Navigation */}
-                        <nav className="flex items-center gap-1">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.path}
-                                    to={link.path}
-                                    className={`relative px-4 py-2 font-headline text-[13px] font-bold tracking-tighter transition-all duration-300 rounded-lg group ${location.pathname === link.path
-                                        ? 'text-gold'
-                                        : 'text-charcoal hover:text-gold'
-                                        }`}
-                                >
-                                    {link.name}
-                                    <span
-                                        className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gold rounded-full transition-all duration-300 ${location.pathname === link.path ? 'w-4' : 'w-0 group-hover:w-4'
-                                            }`}
+                    {/* Left Slot: Logo & Global Search/Lang Group */}
+                    <div className="flex items-center gap-12">
+                        {/* Logo */}
+                        <div className="flex-none flex items-center">
+                            {location.pathname !== '/' && (
+                                <Link to="/" className="flex items-center group">
+                                    <img
+                                        src="/ChatGPT Image 24 mars 2026, 22_08_45.png"
+                                        alt="AB Web & Digital Solutions"
+                                        className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                                     />
                                 </Link>
-                            ))}
-                        </nav>
-                    </div>
-                    {/* Search Bar */}
-                    <div className="relative group w-48 lg:w-64">
-                        <input
-                            type="text"
-                            placeholder={t('search_placeholder')}
-                            className="w-full bg-charcoal/5 border border-charcoal/10 rounded-full py-2 pl-10 pr-4 text-xs font-label focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all"
-                        />
-                        <Search size={14} className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal/40 group-focus-within:text-gold transition-colors" />
-                    </div>
-                    {/* Right Slot: Actions & Mobile Toggle */}
-                    <div className="flex-1 flex items-center justify-end gap-4">
-                        <div className="hidden md:flex items-center gap-4">
+                            )}
+                        </div>
+                        {/* Right Slot: Navigation Links (Menu a droit) */}
+                        <div className="hidden lg:flex items-center gap-1">
+                            <nav className="flex items-center gap-2 xl:gap-6">
+                                {navLinks.map((link) => (
+                                    <Link
+                                        key={link.path}
+                                        to={link.path}
+                                        className={`relative px-4 py-2 font-headline text-[13px] font-bold tracking-tighter transition-all duration-300 rounded-lg group ${location.pathname === link.path
+                                            ? 'text-gold'
+                                            : 'text-charcoal hover:text-gold'
+                                            }`}
+                                    >
+                                        {link.name}
+                                        <span
+                                            className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gold rounded-full transition-all duration-300 ${location.pathname === link.path ? 'w-4' : 'w-0 group-hover:w-4'
+                                                }`}
+                                        />
+                                    </Link>
+                                ))}
+                            </nav>
+                        </div>
+
+                        {/* Search & Language (The "Other" Group) - Aligned exactly with Hero Title Baseline */}
+                        <div className="hidden lg:flex items-center gap-8 lg:absolute lg:right-28 h-full">
+                            <form
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    const formData = new FormData(e.currentTarget);
+                                    const q = formData.get('search');
+                                    if (q) window.location.href = `/search?q=${encodeURIComponent(q as string)}`;
+                                }}
+                                className="relative group w-48 xl:w-64"
+                            >
+                                <input
+                                    type="text"
+                                    name="search"
+                                    placeholder={t('search_placeholder')}
+                                    className="w-full bg-charcoal/5 border border-charcoal/10 rounded-full py-2 pl-10 pr-4 text-xs font-label focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all"
+                                />
+                                <Search size={14} className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal/40 group-focus-within:text-gold transition-colors" />
+                            </form>
+
                             <button
                                 onClick={toggleLanguage}
                                 className="group flex items-center gap-2 p-1 pr-3 rounded-full bg-charcoal/5 hover:bg-gold/10 transition-all duration-300"
                             >
                                 <div className="flex items-center bg-white border border-charcoal/10 rounded-full p-1 shadow-sm group-hover:border-gold/30 transition-all">
-                                    <div className={`w-8 h-8 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'fr' ? 'border-2 border-gold scale-110 shadow-sm' : 'opacity-40'}`}>
+                                    <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'fr' ? 'border-2 border-gold scale-110 shadow-sm' : 'opacity-40'}`}>
                                         <img src="https://flagcdn.com/w40/fr.png" alt="Français" className="w-full h-full object-cover" />
                                     </div>
-                                    <div className={`w-8 h-8 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'en' ? 'border-2 border-gold scale-110 shadow-sm' : 'opacity-40'}`}>
+                                    <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'en' ? 'border-2 border-gold scale-110 shadow-sm' : 'opacity-40'}`}>
                                         <img src="https://flagcdn.com/w40/gb.png" alt="English" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
-                                <span className="font-label text-[10px] font-black tracking-widest uppercase text-charcoal group-hover:text-gold transition-colors">
+                                <span className="font-label text-[9px] font-black tracking-widest text-charcoal group-hover:text-gold transition-colors">
                                     {language.toUpperCase()}
                                 </span>
                             </button>
                         </div>
-
-                        {/* Mobile toggle */}
-                        <button
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="md:hidden p-2.5 rounded-xl bg-charcoal/5 text-charcoal hover:bg-charcoal/10 transition-all active:scale-95"
-                            aria-label="Menu"
-                        >
-                            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-                        </button>
                     </div>
+
+
+
+                    {/* Mobile toggle */}
+                    <button
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="lg:hidden p-2.5 rounded-xl bg-charcoal/5 text-charcoal hover:bg-charcoal/10 transition-all active:scale-95"
+                        aria-label="Menu"
+                    >
+                        {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+                    </button>
                 </div>
             </header>
 

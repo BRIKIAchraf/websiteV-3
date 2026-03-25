@@ -35,7 +35,7 @@ export default function ImageMarquee() {
                 <img
                   src={img}
                   alt="Tech"
-                  className="w-full h-full object-cover grayscale opacity-60 group-hover/marquee:opacity-90 transition-all duration-1000 group-hover:grayscale-0"
+                  className="w-full h-full object-cover opacity-100 transition-all duration-1000"
                 />
               </div>
             ))}

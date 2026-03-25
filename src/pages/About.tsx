@@ -8,9 +8,6 @@ export default function About() {
     <div className="pt-32 pb-20 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12">
-          <span className="text-gold font-label text-sm tracking-wider font-bold uppercase block mb-4">
-            {t('nav_about')}
-          </span>
           <h1 className="font-headline font-bold text-charcoal tracking-tighter mb-3 leading-[0.9]">
             <span className="shimmer-text"><AnimatedText text={t('about_title')} /></span>
           </h1>
@@ -31,12 +28,12 @@ export default function About() {
           </div>
           <div className="relative group">
             <div className="aspect-[4/5] bg-charcoal/5 rounded-2xl overflow-hidden">
-               {/* Use generate_image later if needed, for now a placeholder style */}
-               <div className="w-full h-full bg-gradient-to-br from-gold/20 to-charcoal/5 flex items-center justify-center">
-                  <span className="text-gold/40 font-headline text-8xl font-black">AB</span>
-               </div>
+              {/* Use generate_image later if needed, for now a placeholder style */}
+              <div className="w-full h-full bg-gradient-to-br from-gold/20 to-charcoal/5 flex items-center justify-center">
+                <span className="text-gold/40 font-headline text-8xl font-black">AB</span>
+              </div>
             </div>
-            <div className="absolute -bottom-6 -right-6 w-48 aspect-square bg-gold/10 backdrop-blur-xl rounded-2xl -z-10 transition-transform duration-500 group-hover:translate-x-4 group-hover:translate-y-4" />
+            <div className="absolute -bottom-6 -right-6 w-48 aspect-square bg-gold/10 rounded-2xl -z-10 transition-transform duration-500 group-hover:translate-x-4 group-hover:translate-y-4" />
           </div>
         </div>
 
@@ -44,12 +41,12 @@ export default function About() {
           {[
             { label: 'Projets Réalisés', value: '50+' },
             { label: 'Clients Satisfaits', value: '30+' },
-            { label: 'Années d\'Expérience', value: '12+' },
+            { label: 'Années d\'Expérience', value: '4+' },
             { label: 'Technologies', value: '15+' }
           ].map((stat, i) => (
             <div key={i} className="text-center p-8 bg-charcoal/2 rounded-2xl border border-charcoal/5">
               <div className="text-3xl font-headline font-bold text-gold mb-2">{stat.value}</div>
-              <div className="text-xs font-label font-bold text-charcoal/40 tracking-wider uppercase">{stat.label}</div>
+              <div className="text-xs font-label font-bold text-charcoal/40 tracking-wider font-bold text-charcoal/40">{stat.label}</div>
             </div>
           ))}
         </div>

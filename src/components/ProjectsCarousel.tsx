@@ -72,17 +72,15 @@ export default function ProjectsCarousel() {
                 idx === 0 ? 'md:col-span-1 md:row-span-2 h-96 md:h-auto' : 'h-96'
               }`}
             >
-              <div className="relative w-full h-full overflow-hidden rounded-[2.5rem]">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gold-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                   <h3 className="text-white font-headline font-bold mb-2">{project.title}</h3>
-                  <p className="text-white/80 text-sm font-body tracking-wider uppercase">{project.category}</p>
+                  <p className="text-white/80 text-sm font-body">{project.category}</p>
                 </div>
-              </div>
             </div>
           ))}
         </div>

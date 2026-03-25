@@ -1,6 +1,7 @@
 import { ChevronDown, Palette, Globe, Smartphone, Users, Megaphone, MessageCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import AnimatedText from './AnimatedText';
 const heroPhotos = [
   '/ChatGPT_Image_Mar_16,_2026,_02_03_38_PM.png',
   // Duplicate so every slot has a fallback until more photos are added
@@ -27,11 +28,11 @@ export default function Hero() {
   const { t } = useLanguage();
 
   const services = [
-    { name: t('service_design'), icon: <Palette size={24} /> },
-    { name: t('service_web'), icon: <Globe size={24} /> },
-    { name: t('service_mobile'), icon: <Smartphone size={24} /> },
-    { name: t('service_sponsoring'), icon: <Users size={24} /> },
-    { name: t('service_ads'), icon: <Megaphone size={24} /> }
+    { name: t('service_design'), icon: <Palette size={40} /> },
+    { name: t('service_web'), icon: <Globe size={40} /> },
+    { name: t('service_mobile'), icon: <Smartphone size={40} /> },
+    { name: t('service_sponsoring'), icon: <Users size={40} /> },
+    { name: t('service_ads'), icon: <Megaphone size={40} /> }
   ];
 
   useEffect(() => {
@@ -62,37 +63,47 @@ export default function Hero() {
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black/5 to-transparent z-10 hidden lg:block" />
         </div>
 
-        {/* Desktop-only Decorative Hexagon / Glassmorphic Badge */}
-        <div className="absolute top-1/2 -left-16 -translate-y-1/2 hidden lg:flex items-center justify-center z-30 group-hover:scale-110 transition-transform duration-700">
+        {/* Desktop-only Decorative Orbital System */}
+        <div className="absolute top-1/2 -left-20 -translate-y-1/2 hidden lg:flex items-center justify-center z-30 group-hover:scale-110 transition-transform duration-700">
           
-          {/* Animated Gold Ring */}
-          <div className="absolute w-36 h-36 border border-gold/20 rounded-full animate-[spin_10s_linear_infinite]" />
-          <div className="absolute w-36 h-36 border-t-2 border-gold rounded-full animate-[spin_3s_linear_infinite]" />
+          {/* Rotating Mesh / Dotted Grid Background */}
+          <div className="absolute w-[450px] h-[450px] opacity-20 pointer-events-none animate-[spin_60s_linear_infinite]">
+            <div className="w-full h-full" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+          </div>
+
+          {/* Concentric Rotating "Mesh" Rings */}
+          <div className="absolute w-64 h-64 border border-gold/20 rounded-full animate-[spin_10s_linear_infinite]" />
+          <div className="absolute w-72 h-72 border-2 border-dashed border-gold/10 rounded-full animate-[spin_20s_linear_infinite_reverse]" />
+          <div className="absolute w-[18rem] h-[18rem] border border-gold/5 rounded-full animate-[spin_30s_linear_infinite]" />
+          <div className="absolute w-80 h-80 border-t border-b border-gold/20 rounded-full animate-[spin_5s_linear_infinite]" />
           
-          {/* Glass Hexagon Base */}
-          <div className="relative w-32 h-32 bg-white/10 border border-white/30 shadow-[0_20px_50px_rgba(0,0,0,0.1)] flex items-center justify-center overflow-hidden"
-               style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
+          {/* Subtle Dotted Orbit path */}
+          <div className="absolute w-[21rem] h-[21rem] opacity-30 border border-dotted border-gold/20 rounded-full animate-[spin_40s_linear_infinite]" />
+
+          {/* Central Glass Circle Base - Solid White */}
+          <div className="relative w-44 h-44 bg-white shadow-[0_20px_60px_rgba(212,175,55,0.2)] flex items-center justify-center overflow-hidden rounded-full border border-gold/40 z-10">
+            {/* Inner Gold Mesh Overlay - Increased Opacity */}
+            <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'linear-gradient(45deg, #D4AF37 25%, transparent 25%), linear-gradient(-45deg, #D4AF37 25%, transparent 25%)', backgroundSize: '10px 10px' }} />
             
-            {/* Inner Content Layer */}
-            <div className="absolute inset-x-2 inset-y-2 bg-gradient-to-br from-white/30 to-transparent pointer-events-none" />
-            
-            <div className="flex flex-col items-center justify-center text-center px-2 z-10">
+            <div className="flex flex-col items-center justify-center text-center z-20">
               <div 
                 key={`icon-${serviceIndex}`}
-                className="animate-fade-in-up text-gold mb-2 drop-shadow-[0_0_15px_rgba(212,175,55,0.6)] scale-110"
+                className="animate-fade-in-up bg-white rounded-full p-5 mb-2 shadow-xl flex items-center justify-center transition-all"
               >
-                {services[serviceIndex].icon}
+                <div className="text-gold scale-[1.3]">
+                  {services[serviceIndex].icon}
+                </div>
               </div>
               <div 
                 key={`name-${serviceIndex}`}
-                className="animate-fade-in text-[9px] font-headline font-black tracking-[0.2em] text-white uppercase whitespace-nowrap drop-shadow-md"
+                className="animate-fade-in text-[10px] font-headline font-black tracking-[0.2em] text-charcoal whitespace-nowrap"
               >
                 {services[serviceIndex].name}
               </div>
             </div>
 
-            {/* Pulsing Glow Overlay */}
-            <div className="absolute inset-0 bg-gold/10 animate-pulse-slow pointer-events-none" />
+            {/* Pulsing Interior Glow */}
+            <div className="absolute inset-0 bg-gold/5 animate-pulse-slow pointer-events-none" />
           </div>
         </div>
       </div>
@@ -113,24 +124,24 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Catchphrase / Subtitle - Title Case and tight spacing */}
+        {/* Catchphrase / Subtitle - High contrast for photo background */}
         <div className="animate-fade-in-up delay-150 max-w-xl">
-          <p className="text-charcoal/60 font-headline font-bold text-xs tracking-[0.2em] mb-3 lg:mb-4 flex items-center gap-4 justify-center lg:justify-start">
-            <span className="w-8 h-px bg-gold/30" />
-            {t('hero_expertise')}
-            <span className="w-8 h-px bg-gold/30" />
+          <p className="text-charcoal lg:text-charcoal/60 font-headline font-black text-[10px] lg:text-xs tracking-[0.2em] mb-3 lg:mb-4 flex items-center gap-4 justify-center lg:justify-start drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)] lg:drop-shadow-none">
+            <span className="w-10 h-px bg-gold" />
+            <span className="shimmer-text px-2 py-0.5 rounded backdrop-blur-none">{t('hero_expertise')}</span>
+            <span className="w-10 h-px bg-gold" />
           </p>
-          <h1 className="font-headline font-black text-white lg:text-charcoal leading-tight mb-6 lg:mb-6">
-            {t('hero_title')}
+          <h1 className="font-headline font-black text-white lg:text-charcoal leading-tight mb-6 lg:mb-8 min-h-[4em] lg:min-h-0">
+            <AnimatedText text={t('hero_title')} delay={100} />
           </h1>
 
           {/* Primary Button */}
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mt-2 lg:mt-4">
             <a
               href="#projects"
-              className="group relative px-10 py-3.5 lg:py-4 bg-charcoal text-white rounded-full font-headline font-bold tracking-widest text-sm uppercase overflow-hidden shadow-2xl transition-all active:scale-95"
+              className="group relative px-10 py-3.5 lg:py-4 bg-charcoal text-white rounded-full font-headline font-bold tracking-widest text-sm overflow-hidden shadow-2xl transition-all active:scale-95"
             >
-              <span className="relative z-10 font-bold uppercase">{t('hero_cta')}</span>
+              <span className="relative z-10 font-bold">{t('hero_cta')}</span>
               <div className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </a>
             

@@ -33,14 +33,14 @@ export default function Blog() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-gold text-white text-[10px] font-bold tracking-widest rounded-full shadow-lg">
+                  <span className="px-3 py-1 bg-gold text-white text-[10px] font-bold rounded-full shadow-lg">
                     {post.category}
                   </span>
                 </div>
               </div>
 
               <div className="p-8 flex flex-col flex-grow">
-                <div className="flex items-center gap-4 text-[10px] font-bold text-on-surface/40 tracking-widest mb-4">
+                <div className="flex items-center gap-4 text-[10px] font-bold text-on-surface/40 mb-4">
                   <div className="flex items-center gap-1">
                     <Calendar size={12} className="text-gold" />
                     {post.date}
