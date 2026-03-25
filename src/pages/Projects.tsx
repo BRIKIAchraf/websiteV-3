@@ -3,38 +3,75 @@ import { ExternalLink } from 'lucide-react';
 const allProjects = [
   {
     id: 1,
-    image: '/projects/proinox.png',
-    title: 'Pro Inox Dépannage - Froid & Cuisine',
-    description: 'Site vitrine haute performance pour un expert en dépannage de cuisines professionnelles.',
-    category: 'Web Development'
+    image: '/projects/prestige-clean.png',
+    title: 'Prestige Clean',
+    description: 'Site vitrine pour une entreprise de nettoyage professionnel haut de gamme.',
+    category: 'Web Development',
+    url: 'https://prestige-clean4-d.vercel.app/'
   },
   {
     id: 2,
-    image: '/projects/cleansene.png',
-    title: 'Clean & Séné - Hygiène de Luxe',
-    description: 'Plateforme élégante pour une entreprise de nettoyage haut de gamme.',
-    category: 'Brand Identity'
+    image: '/projects/kridenergy.png',
+    title: 'Krid Energy',
+    description: 'Plateforme en ligne optimisée pour présenter des solutions énergétiques et générer des leads.',
+    category: 'Energy Solutions',
+    url: 'https://kridenergy.fr/'
   },
   {
     id: 3,
-    image: '/projects/ecotech.png',
-    title: 'Eco Tech Energy - CVC & Plomberie',
-    description: 'Présentation moderne des services d’installation et maintenance énergétique.',
-    category: 'UI/UX Design'
+    image: '/projects/dclik-serrure.png',
+    title: 'Dclik Serrure',
+    description: 'Site vitrine pour services de serrurerie d\'urgence, améliorant la visibilité locale.',
+    category: 'Web Services',
+    url: 'https://www.dclik-serrure.com/'
   },
   {
     id: 4,
-    image: '/projects/ads-proinox.png',
-    title: 'Campagne Google Ads - Pro Inox',
-    description: 'Stratégie publicitaire ciblée ayant généré un retour sur investissement significatif.',
-    category: 'Digital Marketing'
+    image: '/projects/ads-pizzwitchs.png',
+    title: 'Serrure Safe',
+    description: 'Portail de services de sécurité avec un fort accent sur l\'UX et le SEO local.',
+    category: 'Web Services',
+    url: 'https://www.serruresafe.fr/'
   },
   {
     id: 5,
-    image: '/projects/ads-pizzwitchs.png',
-    title: 'Campagne Google Ads - Pizzwitchs',
-    description: 'Accroissement de la visibilité locale et des commandes via Google Ads.',
-    category: 'Digital Marketing'
+    image: '/projects/ecotech.png',
+    title: 'Débarras Environnement',
+    description: 'Site spécialiste en gestion des déchets dangereux et désamiantage.',
+    category: 'Environmental',
+    url: '#'
+  },
+  {
+    id: 6,
+    image: '/projects/ecotech.png',
+    title: 'Eco Tech Energy',
+    description: 'Site axé sur la transition énergétique et l\'écologie pour les particuliers.',
+    category: 'Energy Solutions',
+    url: '2.png'
+  },
+  {
+    id: 7,
+    image: '/projects/proinox.png',
+    title: 'Pro Inox Dépannage',
+    description: 'Services de dépannage et réparation professionnels pour matériel de cuisine.',
+    category: 'Maintenance',
+    url: 'https://pro-inox-depannage.fr/'
+  },
+  {
+    id: 8,
+    image: '/projects/prestige-clean.png',
+    title: 'Résidence Ilyes',
+    description: 'Site vitrine pour promotion immobilière et résidences de standing.',
+    category: 'Real Estate',
+    url: 'https://residenceilyes.com/'
+  },
+  {
+    id: 9,
+    image: '/projects/faire.png',
+    title: 'Faire',
+    description: 'Plateforme Marketplace B2B connectant commerçants et marques.',
+    category: 'E-commerce',
+    url: 'https://www.faire.com/'
   }
 ];
 
@@ -48,16 +85,18 @@ export default function Projects() {
           </h1>
           <div className="h-1 w-24 bg-gold mx-auto mb-8"></div>
           <p className="text-xl text-on-surface/60 max-w-2xl mx-auto leading-relaxed">
-            Une collection complète de mes travaux en design et développement, 
+            Une collection complète de mes travaux en design et développement,
             axée sur la performance et l'expérience utilisateur.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allProjects.map((project, index) => (
-            <div 
-              key={project.id} 
-              className="group relative bg-surface rounded-3xl overflow-hidden border border-on-surface/5 hover:border-gold/30 transition-all duration-500 animate-fade-in-up shadow-sm hover:shadow-xl"
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative bg-surface rounded-3xl overflow-hidden border border-on-surface/5 hover:border-gold/30 transition-all duration-500 animate-fade-in-up shadow-sm hover:shadow-xl block"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <div className="aspect-[16/10] overflow-hidden">
@@ -73,17 +112,17 @@ export default function Projects() {
               </div>
 
               <div className="p-8">
-                <span className="text-gold text-xs font-bold tracking-widest mb-2 block">{project.category}</span>
+                <span className="text-gold text-xs font-bold tracking-widest mb-2 block uppercase">{project.category}</span>
                 <h3 className="text-xl font-bold text-on-surface mb-4 group-hover:text-gold transition-colors">{project.title}</h3>
                 <p className="text-on-surface/60 text-sm mb-6 line-clamp-2">
                   {project.description}
                 </p>
                 <div className="flex items-center justify-between">
-                   <div className="h-[1px] flex-grow bg-on-surface/10 mr-4"></div>
-                   <ExternalLink size={18} className="text-on-surface/40 group-hover:text-gold transition-colors" />
+                  <span className="text-xs font-bold text-gold opacity-0 group-hover:opacity-100 transition-opacity">Voir Le Projet</span>
+                  <ExternalLink size={18} className="text-on-surface/40 group-hover:text-gold transition-colors" />
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

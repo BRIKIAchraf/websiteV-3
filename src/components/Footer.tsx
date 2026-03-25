@@ -3,20 +3,20 @@ import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t border-on-surface/10 py-8">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <footer className="bg-background border-t border-on-surface/10 py-3">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
 
-        {/* Logo */}
+        {/* Logo - Slightly reduced for minimal footer height */}
         <Link to="/" className="flex items-center group">
           <img
             src="/ChatGPT Image 24 mars 2026, 22_08_45.png"
             alt="AB Web & Digital Solutions"
-            className="h-60 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            className="h-32 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
           />
         </Link>
 
-        {/* Copyright */}
-        <p className="text-on-surface/40 text-[10px] font-bold tracking-[0.2em] text-center">
+        {/* Copyright - Reduced margin/gap */}
+        <p className="text-on-surface/40 text-[9px] font-bold tracking-[0.2em] text-center -mt-2">
           © 2024 AB Web & Digital Solutions — Tous Droits Réservés
         </p>
 

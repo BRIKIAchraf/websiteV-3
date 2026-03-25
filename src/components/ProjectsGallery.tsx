@@ -5,35 +5,35 @@ import { useRef } from 'react';
 const projects = [
   {
     id: 1,
-    image: '/projects/proinox.png',
-    title: 'Pro Inox Dépannage',
-    description: 'Site vitrine haute performance pour un expert en cuisines professionnelles.',
+    image: '/projects/prestige-clean.png',
+    title: 'Prestige Clean',
+    description: 'Site vitrine pour une entreprise de nettoyage professionnel haut de gamme.',
     category: 'Web Development',
-    link: '/projects',
+    link: 'https://prestige-clean4-d.vercel.app/',
   },
   {
     id: 2,
-    image: '/projects/cleansene.png',
-    title: 'Clean & Séné',
-    description: 'Plateforme élégante pour une entreprise de nettoyage haut de gamme.',
-    category: 'Brand Identity',
-    link: '/projects',
+    image: '/projects/kridenergy.png',
+    title: 'Krid Energy',
+    description: 'Plateforme en ligne pour solutions énergétiques et transition écologique.',
+    category: 'Energy Solutions',
+    link: 'https://kridenergy.fr/',
   },
   {
     id: 3,
-    image: '/projects/ecotech.png',
-    title: 'Eco Tech Energy',
-    description: "Présentation moderne des services d'installation énergétique.",
-    category: 'UI/UX Design',
-    link: '/projects',
+    image: '/projects/dclik-serrure.png',
+    title: 'Dclik Serrure',
+    description: 'Site professionnel pour services de serrurerie d\'urgence et sécurité.',
+    category: 'Web Services',
+    link: 'https://www.dclik-serrure.com/',
   },
   {
     id: 4,
-    image: '/projects/ads-proinox.png',
-    title: 'Stratégie Google Ads',
-    description: 'Campagne publicitaire ciblée optimisant le ROI.',
-    category: 'Digital Marketing',
-    link: '/projects',
+    image: '/projects/faire.png',
+    title: 'Faire',
+    description: 'Marketplace B2B connectant commerçants et marques internationales.',
+    category: 'E-commerce',
+    link: 'https://www.faire.com/',
   },
 ];
 
@@ -62,9 +62,12 @@ export default function ProjectsGallery() {
           style={{ scrollBehavior: 'smooth' }}
         >
           {projects.map((project, index) => (
-            <div
+            <a
               key={project.id}
-              className="group flex-shrink-0 w-[320px] md:w-[400px] snap-start bg-surface rounded-3xl overflow-hidden border border-on-surface/5 hover:border-gold/30 transition-all duration-500 shadow-sm hover:shadow-xl animate-fade-in-up"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex-shrink-0 w-[320px] md:w-[400px] snap-start bg-surface rounded-3xl overflow-hidden border border-on-surface/5 hover:border-gold/30 transition-all duration-500 shadow-sm hover:shadow-xl animate-fade-in-up block"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Image */}
@@ -100,7 +103,7 @@ export default function ProjectsGallery() {
                 </p>
                 <div className="h-[1px] w-0 bg-gold group-hover:w-full transition-all duration-700 mt-5" />
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
