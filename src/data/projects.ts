@@ -101,7 +101,7 @@ export const allProjects: Project[] = [
   },
   {
     id: 14,
-    image: '/capture-pro-inox.png',
+    image: '/4.png',
     title: 'Pro Inox Dépannage',
     description: 'Site professionnel vitrine pour services de dépannage, maintenance et installation.',
     description_en: 'Professional showcase site for repair, maintenance, and installation services.',
@@ -110,11 +110,29 @@ export const allProjects: Project[] = [
   },
   {
     id: 15,
-    image: '/capture-eco-tech.png',
+    image: '/5.png',
     title: 'Eco Tech Energy',
     description: 'Plateforme dédiée aux solutions énergétiques avancées et écologiques.',
     description_en: 'Platform dedicated to advanced and ecological energy solutions.',
     category: 'WEB',
     url: 'https://www.eco-tech-energy.fr/'
+  },
+  {
+    id: 16,
+    image: '/2 copy.png',
+    title: 'Campagne d\'Affichage',
+    description: 'Conception graphique d\'affiches publicitaires grand format pour des événements événementiels.',
+    description_en: 'Graphic design of large format advertising posters for events and campaigns.',
+    category: 'DESIGN',
+    url: '#'
+  },
+  {
+    id: 17,
+    image: '/1 copy.png',
+    title: 'Flyers & Prospectus',
+    description: 'Design de flyers promotionnels percutants pour développer l\'acquisition client locale.',
+    description_en: 'Design of impactful promotional flyers to drive local customer acquisition.',
+    category: 'DESIGN',
+    url: '#'
   }
 ];
