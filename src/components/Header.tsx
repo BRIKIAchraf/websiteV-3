@@ -38,19 +38,23 @@ export default function Header() {
             >
                 <div className="max-w-7xl mx-auto px-6 md:px-14 flex items-center justify-between" style={{ height: '80px' }}>
 
-                    {/* Enlarged 3D Logo (Matches Hero) */}
-                    <Link to="/" className="flex items-center group">
-                        <img
-                            src="/ChatGPT Image 24 mars 2026, 22_08_45.png"
-                            alt="AB Web & Digital Solutions"
-                            className="h-20 md:h-24 lg:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                        />
-                    </Link>
+                    {/* Left Slot: Logo */}
+                    <div className="flex-1 flex items-center">
+                        {location.pathname !== '/' && (
+                            <Link to="/" className="flex items-center group">
+                                <img
+                                    src="/ChatGPT Image 24 mars 2026, 22_08_45.png"
+                                    alt="AB Web & Digital Solutions"
+                                    className="h-20 md:h-24 lg:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                                />
+                            </Link>
+                        )}
+                    </div>
 
-                    {/* Desktop Search & Nav (Centered) */}
-                    <div className="hidden md:flex flex-1 justify-center items-center gap-8">
+                    {/* Center Slot: Desktop Search & Nav (Always Centered) */}
+                    <div className="hidden md:flex flex-none items-center gap-8">
                         {/* Search Bar */}
-                        <div className="relative group max-w-xs w-full lg:w-64">
+                        <div className="relative group w-48 lg:w-64">
                             <input
                                 type="text"
                                 placeholder={t('search_placeholder')}
@@ -80,32 +84,34 @@ export default function Header() {
                         </nav>
                     </div>
 
-                    {/* Right Actions: Language & Contact */}
-                    <div className="hidden md:flex items-center gap-4">
+                    {/* Right Slot: Actions & Mobile Toggle */}
+                    <div className="flex-1 flex items-center justify-end gap-4">
+                        <div className="hidden md:flex items-center gap-4">
+                            <button
+                                onClick={toggleLanguage}
+                                className="p-2.5 rounded-full bg-charcoal/5 text-charcoal hover:bg-gold/10 hover:text-gold transition-all duration-300 flex items-center gap-2 font-label text-[10px] font-black tracking-widest uppercase"
+                            >
+                                <Globe size={16} />
+                                {language === 'fr' ? 'EN' : 'FR'}
+                            </button>
+
+                            <a
+                                href="mailto:achraf@briki.dev"
+                                className="px-6 py-2.5 bg-gold text-white rounded-full font-label font-black text-[11px] tracking-[0.18em] hover:bg-gold-dark transition-all duration-300 shadow-[0_4px_20px_rgba(212,175,55,0.25)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.4)] active:scale-95"
+                            >
+                                {t('contact_me')}
+                            </a>
+                        </div>
+
+                        {/* Mobile toggle */}
                         <button
-                            onClick={toggleLanguage}
-                            className="p-2.5 rounded-full bg-charcoal/5 text-charcoal hover:bg-gold/10 hover:text-gold transition-all duration-300 flex items-center gap-2 font-label text-[10px] font-black tracking-widest uppercase"
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="md:hidden p-2.5 rounded-xl bg-charcoal/5 text-charcoal hover:bg-charcoal/10 transition-all active:scale-95"
+                            aria-label="Menu"
                         >
-                            <Globe size={16} />
-                            {language === 'fr' ? 'EN' : 'FR'}
+                            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
                         </button>
-
-                        <a
-                            href="mailto:achraf@briki.dev"
-                            className="px-6 py-2.5 bg-gold text-white rounded-full font-label font-black text-[11px] tracking-[0.18em] hover:bg-gold-dark transition-all duration-300 shadow-[0_4px_20px_rgba(212,175,55,0.25)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.4)] active:scale-95"
-                        >
-                            {t('contact_me')}
-                        </a>
                     </div>
-
-                    {/* Mobile toggle */}
-                    <button
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="md:hidden p-2.5 rounded-xl bg-charcoal/5 text-charcoal hover:bg-charcoal/10 transition-all active:scale-95"
-                        aria-label="Menu"
-                    >
-                        {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-                    </button>
                 </div>
             </header>
 
