@@ -1,41 +1,7 @@
+import { allProjects as projects } from '../data/projects';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
-
-const projects = [
-  {
-    id: 1,
-    image: '/projects/prestige-clean.png',
-    title: 'Prestige Clean',
-    description: 'Site vitrine pour une entreprise de nettoyage professionnel haut de gamme.',
-    category: 'Web Development',
-    link: 'https://prestige-clean4-d.vercel.app/',
-  },
-  {
-    id: 2,
-    image: '/projects/kridenergy.png',
-    title: 'Krid Energy',
-    description: 'Plateforme en ligne pour solutions énergétiques et transition écologique.',
-    category: 'Energy Solutions',
-    link: 'https://kridenergy.fr/',
-  },
-  {
-    id: 3,
-    image: '/projects/dclik-serrure.png',
-    title: 'Dclik Serrure',
-    description: 'Site professionnel pour services de serrurerie d\'urgence et sécurité.',
-    category: 'Web Services',
-    link: 'https://www.dclik-serrure.com/',
-  },
-  {
-    id: 4,
-    image: '/projects/faire.png',
-    title: 'Faire',
-    description: 'Marketplace B2B connectant commerçants et marques internationales.',
-    category: 'E-commerce',
-    link: 'https://www.faire.com/',
-  },
-];
 
 export default function ProjectsGallery() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -64,7 +30,7 @@ export default function ProjectsGallery() {
           {projects.map((project, index) => (
             <a
               key={project.id}
-              href={project.link}
+              href={project.url}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex-shrink-0 w-[320px] md:w-[400px] snap-start bg-surface rounded-3xl overflow-hidden border border-on-surface/5 hover:border-gold/30 transition-all duration-500 shadow-sm hover:shadow-xl animate-fade-in-up block"

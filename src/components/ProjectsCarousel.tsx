@@ -1,51 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-interface Project {
-  id: number;
-  title: string;
-  category: string;
-  image: string;
-}
-
-const projects: Project[] = [
-  {
-    id: 1,
-    title: 'Site Vitrine Architecture',
-    category: 'Web Design',
-    image: 'https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
-  },
-  {
-    id: 2,
-    title: 'App Mobile Immobilier',
-    category: 'App Development',
-    image: 'https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
-  },
-  {
-    id: 3,
-    title: 'Dashboard Analytics',
-    category: 'UI/UX Design',
-    image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
-  },
-  {
-    id: 4,
-    title: 'E-Commerce Platform',
-    category: 'Full Stack',
-    image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
-  },
-  {
-    id: 5,
-    title: 'Brand Identity System',
-    category: 'Branding',
-    image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
-  },
-  {
-    id: 6,
-    title: 'SaaS Dashboard',
-    category: 'Product Design',
-    image: 'https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
-  }
-];
+import { allProjects as projects } from '../data/projects';
 
 export default function ProjectsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
