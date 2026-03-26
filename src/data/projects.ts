@@ -38,7 +38,7 @@ export const allProjects: Project[] = [
   },
   {
     id: 10,
-    image: '/capture1.png',
+    image: '/Maitrio.png',
     title: 'Eco Mobile App',
     description: 'Application mobile de suivi de consommation énergétique en temps réel.',
     description_en: 'Mobile application for real-time energy consumption tracking.',
