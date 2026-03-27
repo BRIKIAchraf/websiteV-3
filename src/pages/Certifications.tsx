@@ -1,5 +1,6 @@
 import { Award, GraduationCap, Briefcase, Calendar, MapPin, Code2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import AnimatedText from '../components/AnimatedText';
 
 const education = [
   {
@@ -133,7 +134,7 @@ export default function Certifications() {
         {/* Header Section */}
         <div className="mb-16 animate-fade-in text-center">
           <h1 className="font-bold text-on-surface mb-3 font-headline">
-            {t('cert_title_1')} <span className="shimmer-text">{t('cert_title_2')}</span>
+            <AnimatedText text={t('cert_title_1')} delay={0} /> <span className="shimmer-text"><AnimatedText text={t('cert_title_2')} delay={300} /></span>
           </h1>
           <div className="h-[2px] w-20 bg-gold rounded-full mx-auto mb-8" />
           <p className="text-on-surface/60 max-w-2xl mx-auto leading-relaxed">
@@ -150,7 +151,7 @@ export default function Certifications() {
                 <GraduationCap size={28} />
               </div>
               <h2 className="font-headline font-black text-charcoal tracking-tighter">
-                Études <span className="shimmer-text italic">Académiques</span>
+                <AnimatedText text={t('education_title_1')} delay={0} /> <span className="shimmer-text italic"><AnimatedText text={t('education_title_2')} delay={300} /></span>
               </h2>
             </div>
 
@@ -185,7 +186,7 @@ export default function Certifications() {
                 <Briefcase size={28} />
               </div>
               <h2 className="font-headline font-black text-charcoal tracking-tighter">
-                {t('experience_title_1')} <span className="shimmer-text italic">{t('experience_title_2')}</span>
+                <AnimatedText text={t('experience_title_1')} delay={0} /> <span className="shimmer-text italic"><AnimatedText text={t('experience_title_2')} delay={300} /></span>
               </h2>
             </div>
 
@@ -230,7 +231,7 @@ export default function Certifications() {
               <Award size={28} />
             </div>
             <h2 className="font-headline font-black text-charcoal tracking-tighter">
-              {t('cert_list_title_1')} <span className="shimmer-text italic">{t('cert_list_title_2')}</span>
+              <AnimatedText text={t('cert_list_title_1')} delay={0} /> <span className="shimmer-text italic"><AnimatedText text={t('cert_list_title_2')} delay={300} /></span>
             </h2>
           </div>
 

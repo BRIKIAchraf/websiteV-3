@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/blog';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import AnimatedText from '../components/AnimatedText';
 
 export default function Blog() {
   const { t, language } = useLanguage();
@@ -10,7 +11,7 @@ export default function Blog() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in text-center">
           <h1 className="font-bold text-on-surface mb-3 font-headline">
-            {t('blog_title_1')} <span className="shimmer-text">{t('blog_title_2')}</span>
+            <AnimatedText text={t('blog_title_1')} delay={0} /> <span className="shimmer-text"><AnimatedText text={t('blog_title_2')} delay={300} /></span>
           </h1>
           <div className="h-[2px] w-20 bg-gold rounded-full mx-auto mb-8" />
           <p className="text-on-surface/60 max-w-2xl mx-auto leading-relaxed">

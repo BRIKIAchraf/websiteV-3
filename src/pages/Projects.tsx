@@ -2,6 +2,7 @@ import { allProjects } from '../data/projects';
 import { ExternalLink, Filter } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useState, useMemo } from 'react';
+import AnimatedText from '../components/AnimatedText';
 
 export default function Projects() {
   const { t, language } = useLanguage();
@@ -19,7 +20,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 animate-fade-in text-center">
           <h1 className="font-bold text-on-surface mb-3 font-headline">
-            {t('projects_page_title_1')} <span className="shimmer-text">{t('projects_page_title_2')}</span>
+            <AnimatedText text={t('projects_page_title_1')} delay={0} /> <span className="shimmer-text"><AnimatedText text={t('projects_page_title_2')} delay={300} /></span>
           </h1>
           <div className="h-[2px] w-20 bg-gold rounded-full mx-auto mb-8" />
           <p className="text-on-surface/60 max-w-2xl mx-auto leading-relaxed">

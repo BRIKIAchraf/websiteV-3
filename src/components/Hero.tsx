@@ -145,15 +145,18 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </a>
             
-            <a
-              href="https://wa.me/393922437748"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-8 py-3.5 lg:py-4 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 rounded-full font-headline font-bold tracking-widest text-sm uppercase transition-all hover:bg-[#25D366] hover:text-white active:scale-95"
-            >
-              <MessageCircle size={20} className="group-hover:animate-bounce" />
-              WhatsApp
-            </a>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-30 group-hover:animate-none" style={{ animationDuration: '2s' }} />
+              <a
+                href="https://wa.me/393922437748"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative flex items-center gap-3 px-8 py-3.5 lg:py-4 bg-[#25D366] text-white rounded-full font-headline font-bold tracking-widest text-sm uppercase transition-all animate-pulse hover:animate-none hover:scale-105 shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:shadow-[0_0_30px_rgba(37,211,102,0.8)] active:scale-95"
+              >
+                <MessageCircle size={20} className="group-hover:animate-bounce" />
+                WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>

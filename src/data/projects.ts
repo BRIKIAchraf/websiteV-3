@@ -13,7 +13,7 @@ export const allProjects: Project[] = [
     id: 1,
     image: '/8.png',
     title: 'Prestige Clean',
-    description: 'Site vitrine pour une entreprise de nettoyage professionnel haut de gamme.',
+    description: 'Site professionnel pour une entreprise de nettoyage professionnel haut de gamme.',
     description_en: 'Showcase site for a high-end professional cleaning company.',
     category: 'WEB',
     url: 'https://prestige-clean4-d.vercel.app/'
@@ -26,6 +26,15 @@ export const allProjects: Project[] = [
     description_en: 'B2B Marketplace platform connecting retailers and brands.',
     category: 'WEB',
     url: 'https://www.faire.com/'
+  },
+  {
+    id: 3,
+    image: '/public/11.png',
+    title: 'Résidence Ilyes',
+    description: 'Site professionnel pour promotion immobilière et résidences de standing.',
+    description_en: 'Showcase site for real estate promotion and luxury residences.',
+    category: 'WEB',
+    url: 'https://residenceilyes.com/'
   },
   {
     id: 2,
@@ -76,7 +85,7 @@ export const allProjects: Project[] = [
     id: 3,
     image: '/9.png',
     title: 'Dclik Serrure',
-    description: 'Site vitrine pour services de serrurerie d\'urgence.',
+    description: 'Site professionnel pour services de serrurerie d\'urgence.',
     description_en: 'Showcase site for emergency locksmith services.',
     category: 'WEB',
     url: 'https://www.dclik-serrure.com/'
@@ -89,15 +98,6 @@ export const allProjects: Project[] = [
     description_en: 'Security services portal with a strong focus on UX.',
     category: 'WEB',
     url: 'https://www.serruresafe.fr/'
-  },
-  {
-    id: 8,
-    image: '/public/11.png',
-    title: 'Résidence Ilyes',
-    description: 'Site vitrine pour promotion immobilière et résidences de standing.',
-    description_en: 'Showcase site for real estate promotion and luxury residences.',
-    category: 'WEB',
-    url: 'https://residenceilyes.com/'
   },
   {
     id: 14,

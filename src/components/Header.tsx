@@ -76,7 +76,7 @@ export default function Header() {
                         </div>
 
                         {/* Search & Language (The "Other" Group) - Aligned exactly with Hero Title Baseline */}
-                        <div className="hidden lg:flex items-center gap-8 lg:absolute lg:right-28 h-full">
+                        <div className="hidden lg:flex items-center gap-4 lg:absolute lg:right-28 h-full">
                             <form
                                 onSubmit={(e) => {
                                     e.preventDefault();
@@ -97,13 +97,13 @@ export default function Header() {
 
                             <button
                                 onClick={toggleLanguage}
-                                className="group flex items-center gap-2 p-1 pr-3 rounded-full bg-charcoal/5 hover:bg-gold/10 transition-all duration-300"
+                                className="group flex items-center gap-2 w-max py-1 pl-1 pr-3 rounded-full bg-charcoal/5 hover:bg-gold/10 transition-all duration-300 border border-charcoal/10"
                             >
-                                <div className="flex items-center bg-white border border-charcoal/10 rounded-full p-1 shadow-sm group-hover:border-gold/30 transition-all">
-                                    <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'fr' ? 'border-2 border-gold scale-110 shadow-sm' : 'opacity-40'}`}>
+                                <div className="flex items-center bg-white border border-charcoal/10 rounded-full p-0.5 shadow-sm group-hover:border-gold/30 transition-all">
+                                    <div className={`w-5 h-5 md:w-6 md:h-6 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'fr' ? 'border-2 border-gold scale-110 shadow-sm' : 'opacity-40'}`}>
                                         <img src="https://flagcdn.com/w40/fr.png" alt="Français" className="w-full h-full object-cover" />
                                     </div>
-                                    <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'en' ? 'border-2 border-gold scale-110 shadow-sm' : 'opacity-40'}`}>
+                                    <div className={`w-5 h-5 md:w-6 md:h-6 rounded-full overflow-hidden flex items-center justify-center transition-all ${language === 'en' ? 'border-2 border-gold scale-110 shadow-sm' : 'opacity-40'}`}>
                                         <img src="https://flagcdn.com/w40/gb.png" alt="English" className="w-full h-full object-cover" />
                                     </div>
                                 </div>

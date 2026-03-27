@@ -1,4 +1,5 @@
 import { useLanguage } from '../context/LanguageContext';
+import AnimatedText from './AnimatedText';
 
 const partners = [
   { name: 'Zarzis Park', logo: '/partners/5.png' },
@@ -24,7 +25,7 @@ export default function Partners() {
       <div className="max-w-7xl mx-auto px-6 mb-12">
         <div className="flex flex-col items-center text-center">
           <h2 className="font-headline font-bold text-charcoal text-3xl md:text-4xl mb-4">
-            {t('partners_title_1')} <span className="shimmer-text">{t('partners_title_2')}</span>
+            <AnimatedText text={t('partners_title_1')} delay={0} /> <span className="shimmer-text"><AnimatedText text={t('partners_title_2')} delay={300} /></span>
           </h2>
           <div className="h-1 w-20 bg-gold rounded-full mb-6" />
           <p className="text-charcoal/60 max-w-xl font-medium">

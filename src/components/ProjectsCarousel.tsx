@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { allProjects as projects } from '../data/projects';
 import { useLanguage } from '../context/LanguageContext';
+import AnimatedText from './AnimatedText';
 
 export default function ProjectsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,7 +43,7 @@ export default function ProjectsCarousel() {
         <div className="flex justify-between items-center mb-12">
           <div>
             <h2 className="font-headline font-black text-primary mb-2">
-              {t('carousel_title_1')} <span className="shimmer-text">{t('carousel_title_2')}</span>
+              <AnimatedText text={t('carousel_title_1')} delay={0} /> <span className="shimmer-text"><AnimatedText text={t('carousel_title_2')} delay={300} /></span>
             </h2>
             <p className="text-secondary opacity-80 font-body">
               {t('carousel_subtitle')}

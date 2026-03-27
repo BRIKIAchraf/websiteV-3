@@ -3,6 +3,7 @@ import { ExternalLink, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import AnimatedText from './AnimatedText';
 
 export default function ProjectsGallery() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -19,7 +20,7 @@ export default function ProjectsGallery() {
         </div>
         <div className="mb-16 animate-fade-in text-center">
           <h1 className="font-bold text-on-surface mb-3 font-headline">
-            {t('projects_title_1')} <span className="shimmer-text">{t('projects_title_2')}</span>
+            <AnimatedText text={t('projects_title_1')} delay={0} /> <span className="shimmer-text"><AnimatedText text={t('projects_title_2')} delay={300} /></span>
           </h1>
           <div className="h-[2px] w-20 bg-gold rounded-full mx-auto mb-8" />
         </div>

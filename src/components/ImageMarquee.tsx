@@ -1,4 +1,5 @@
 import { useLanguage } from '../context/LanguageContext';
+import AnimatedText from './AnimatedText';
 
 const images = [
   'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop', // Modern desk/laptop
@@ -16,7 +17,7 @@ export default function ImageMarquee() {
       <div className="flex flex-col gap-16">
         <div className="mb-1 animate-fade-in text-center">
           <h1 className="font-bold text-on-surface mb-3 font-headline">
-            {t('marquee_title_1')} <span className="shimmer-text">{t('marquee_title_2')}</span>
+            <AnimatedText text={t('marquee_title_1')} delay={0} /> <span className="shimmer-text"><AnimatedText text={t('marquee_title_2')} delay={300} /></span>
           </h1>
           <div className="h-[2px] w-20 bg-gold rounded-full mx-auto mb-8" />
           <p className="text-on-surface/60 max-w-2xl mx-auto leading-relaxed">
