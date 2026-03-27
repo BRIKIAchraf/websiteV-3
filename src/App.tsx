@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
+import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -16,6 +17,7 @@ function App() {
   return (
     <LanguageProvider>
       <Router>
+        <ScrollToTop />
         <div className="min-h-screen bg-background antialiased flex flex-col">
           <Header />
           <main className="flex-grow">
