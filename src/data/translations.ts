@@ -1,6 +1,6 @@
 export type Language = 'fr' | 'en';
 
-export type TranslationKeys = 
+export type TranslationKeys =
   | 'nav_home'
   | 'nav_projects'
   | 'nav_technologies'
@@ -139,7 +139,7 @@ export const translations: Record<Language, Record<string, string>> = {
     service_mobile: 'MOBILE',
     service_sponsoring: 'SPONSORING',
     service_ads: 'ADS',
-    partners_title_1: 'notre',
+    partners_title_1: 'Nos',
     partners_title_2: 'partenaires',
     partners_subtitle: 'ils nous font confiance pour leur présence digitale.'
   },
